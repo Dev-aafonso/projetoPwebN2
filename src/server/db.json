@@ -1,3 +1,9 @@
 {
-    "Usuarios":[]
+  "usuarios": [
+    {
+      "id": "993a",
+      "nome": "Thalita Narizinho",
+      "email": "thalitanarizinho@gmail.com"
+    }
+  ]
 }
