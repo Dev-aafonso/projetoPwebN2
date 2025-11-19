@@ -1,9 +1,18 @@
 {
-  "usuarios": [
+  "posts": [
     {
-      "id": "db91",
-      "nome": "Thalita Narizinho",
-      "email": "thalitanarizinho@gmail.com"
+      "id": 1,
+      "titulo": "Como o React JS mudou a forma de construir sistemas modernos?",
+      "conteudo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ijit. Ut enim ad minim veniam.",
+      "autor": "Helena Souza",
+      "categoria": "Tecnologia"
+    },
+    {
+      "id": 3,
+      "titulo": "Como o React JS mudou a forma de construir sistemas modernos?",
+      "conteudo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ijit. Ut enim ad minim veniam.",
+      "autor": "João Silva",
+      "categoria": "JavaScript"
     }
   ]
 }
