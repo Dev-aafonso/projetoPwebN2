@@ -268,6 +268,7 @@ async function adicionarPostsExemplo() {
                 });
             }
             listarPosts();
+            
         }
     } catch (error) {
         console.error("Erro ao adicionar posts exemplo:", error);

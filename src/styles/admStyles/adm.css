@@ -514,6 +514,7 @@ body {
     background: var(--danger-hover);
 }
 
+
 /* Animações */
 @keyframes modalSlideIn {
     from {
