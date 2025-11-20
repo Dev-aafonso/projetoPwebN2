@@ -1,9 +1,103 @@
 {
-  "usuarios": [
+  "posts": [
     {
-      "id": "db91",
-      "nome": "Thalita Narizinho",
-      "email": "thalitanarizinho@gmail.com"
+      "autor": "Afonso",
+      "titulo": "Áreas da programação: conheça as principais",
+      "categoria": "Tecnologia",
+      "imagem": "https://blog.gokursos.com/wp-content/uploads/2023/05/programming-background-with-person-working-with-codes-computer-1200x800.jpg",
+      "conteudo": "Você conhece a área de programação? É ela que se dedica a criar e desenvolver softwares, aplicativos e sistemas computacionais. A programação envolve a criação de algoritmos, que são instruções que um computador pode seguir para resolver um problema ou realizar uma tarefa específica.",
+      "data": "2025-11-20T18:41:48.598Z",
+      "id": "f30d"
+    },
+    {
+      "id": "76bd",
+      "autor": "Afonso",
+      "titulo": "Programação: 5 profissões que exigem saber programar",
+      "categoria": "Tecnologia",
+      "imagem": "https://idocode.com.br/wp-content/uploads/2021/07/programacao-1024x684.jpg.webp",
+      "conteudo": "Há diversas oportunidades no mercado de trabalho para profissionais que sabem tudo de programação e, acredite, algumas delas foram feitas especialmente para as crianças e adolescentes de hoje. Vamos falar sobre elas?",
+      "data": "2025-11-20T18:30:00.029Z"
+    },
+    {
+      "id": "b645",
+      "autor": "Afonso",
+      "titulo": "GitHub lista as linguagens de programação que mais crescem",
+      "categoria": "Tecnologia",
+      "imagem": "https://midias.inforchannel.com.br/wp-content/uploads/2023/02/Github-Top-10-linguagens-de-programacao-768x432.jpg.webp",
+      "conteudo": "Em um mundo moderno cada vez mais dependente de plataformas digitais, profissionais de programação estão vendo crescer sua demanda e, com ela, a variedade de particularidades de cada projeto. Em 2022, GitHub viu mais de 20 milhões de novas pessoas juntarem-se à plataforma, alcançando agora 100 milhões de pessoas desenvolvedoras em todo o todo o mundo. O Brasil está entre os países com maior crescimento na plataforma e registrou quase um milhão de novas pessoas desenvolvedoras no último ano, ou seja, uma em cada 10 dessas que se juntaram ao GitHub em 2022 é brasileira.",
+      "data": "2025-11-20T18:30:34.854Z"
+    },
+    {
+      "id": "4e2b",
+      "autor": "Afonso",
+      "titulo": "10 Curiosidades informáticas y tecnológicas que debes conocer",
+      "categoria": "Informática",
+      "imagem": "https://supercurioso.com/wp-content/uploads/2023/06/curiosidades-tecnologicas-e-informaticas.jpg",
+      "conteudo": "En el mundo digital, las empresas deben mantenerse al día en las tendencias y datos relevantes que resignifiquen el entorno y les permitan ser competitivas y eficientes dentro del mismo. Lo anterior aplica para toda clase de negocios. Además, estos datos ayudarán a que el cliente se interese en las ventajas de los avances tecnológicos y descubra en ellos posibilidades de crecimiento y éxito.",
+      "data": "2025-11-20T18:33:07.874Z"
+    },
+    {
+      "id": "7ec9",
+      "autor": "Afonso",
+      "titulo": "Os Avanços Tecnológicos Provocaram Mudanças Na Sociedade",
+      "categoria": "Tecnologia",
+      "imagem": "https://tse4.mm.bing.net/th?id=OIP.VWYL3Z4HTUEBW7PYVbPdAAHaD2&pid=15.1",
+      "conteudo": "Weba quarta revolução tecnológica está em andamento e é caracterizada pela inteligência artificial, robótica, internet das coisas e outras tecnologias avançadas. A tecnologia tem impactado profundamente a economia, gerando novas indústrias e transformando as existentes. A tecnologia também tem impactado a sociedade, mudando a forma como. Webo impacto da tecnologia na sociedade atual:",
+      "data": "2025-11-20T18:34:04.428Z"
+    },
+    {
+      "id": "9217",
+      "autor": "Afonso",
+      "titulo": "Consecuencias de un mundo avanzado en la tecnología",
+      "categoria": "Tecnologia",
+      "imagem": "https://alphaenginyeria.com/wp-content/uploads/2024/01/Tendencias-Tecnologicas-2024-Las.webp",
+      "conteudo": "Un mundo avanzado en tecnología trae consigo una serie de consecuencias que afectan diferentes aspectos de la vida cotidiana, la economía, la sociedad y el medio ambiente. Aquí hay algunas de las más significativas:",
+      "data": "2025-11-20T18:37:00.963Z"
+    },
+    {
+      "id": "05b0",
+      "autor": "Afonso",
+      "titulo": "A História da Tecnologia Blockchain: Conheça sua Timeline",
+      "categoria": "Tecnologia",
+      "imagem": "https://101blockchains.com/wp-content/uploads/2018/12/historia-de-la-tecnolog%C3%ADa-blockchain.png.webp",
+      "conteudo": "Como surgiu a blockchain? Stuart Haber e W. Scott Stornetta imaginaram o que muitas pessoas passaram a conhecer como blockchain, em 1991.\nInicialmente o primeiro projeto envolveu a criação em uma rede de blocos protegidos criptograficamente, onde ninguém poderia adulterar o registro de data e hora dos documentos.",
+      "data": "2025-11-20T18:37:48.469Z"
+    },
+    {
+      "id": "c46d",
+      "autor": "Afonso",
+      "titulo": "A comunicação no mundo digital",
+      "categoria": "Tecnologia",
+      "imagem": "https://img.jaenoticia.com.br/mXK1L7_g9tXInf8Zhs24x2YqHHo=/736x431/smart/s3.jaenoticia.com.br/uploads/imagens/blog_1477.jpeg",
+      "conteudo": "Neste período de pandemia e isolamento social tivemos que gerar transformação nas nossas vidas. Nossa rotina e costumes não são mais os mesmos, mudamos repentinamente pela necessidade, pois novas habilidades e competência tivemos que desenvolver para seguir nosso dia a dia cheio de informações e novas formas de comunicação digital.",
+      "data": "2025-11-20T18:38:22.217Z"
+    },
+    {
+      "id": "e9f7",
+      "autor": "Afonso",
+      "titulo": "Inteligencia artificial, robótica y mujeres: una nueva revolución",
+      "categoria": "Tecnologia",
+      "imagem": "https://www.clarin.com/img/2018/10/03/PV6KmBOO4_1256x620__1.jpg",
+      "conteudo": "Las nuevas tecnologías están cambiando rápidamente el mundo que conocemos y avanzan mucho más rápido que los cambios sociales, jurídicos y hasta que nuestra propia capacidad de asimilarlos.",
+      "data": "2025-11-20T18:39:17.019Z"
+    },
+    {
+      "id": "4983",
+      "autor": "Afonso",
+      "titulo": "Los 5 avances tecnológicos más esperados en este 2024",
+      "categoria": "Tecnologia",
+      "imagem": "https://media.radio10.com.ar/p/764fdc857be19cd03163f75fb04a1041/adjuntos/220/imagenes/041/433/0041433265/730x0/smart/tendencias-futuro-tecnologia-2024-643x342jpg.jpg",
+      "conteudo": "Las empresas trabajan incansablemente en crear y adaptarse a las distintas tendencias. En los últimos años, se ha observado un vertiginoso progreso en diversas áreas tecnológicas, acercándonos a nuevas e innovadoras tendencias a un ritmo sin precedentes. Estas tendencias están dejando su huella desde nuestra vida cotidiana hasta la forma en que las principales industrias manejan sus operaciones.",
+      "data": "2025-11-20T18:39:52.336Z"
+    },
+    {
+      "id": "13a2",
+      "autor": "Afonso",
+      "titulo": "Curso de Informática",
+      "categoria": "Curso",
+      "imagem": "https://www.nacionaleducacao.com.br/upload/service/l8ijYxC7LCybrwDSKzU31L84B5FJBFekSWKUF3DF.jpeg",
+      "conteudo": "O curso de Informática oferecido pelo Nacional Educação é a opção ideal para quem deseja ingressar no mundo da tecnologia de maneira rápida e eficiente, adquirindo as habilidades necessárias para atuar em um mercado que está em constante expansão.",
+      "data": "2025-11-20T20:10:44.034Z"
     }
   ]
 }
