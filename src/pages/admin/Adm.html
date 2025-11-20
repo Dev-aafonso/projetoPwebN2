@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gerenciador de Usuários</title>
+    <title>S4Blog - Minhas Publicações</title>
     <link rel="stylesheet" href="../../styles/admStyles/adm.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
@@ -13,80 +13,149 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-  </head>
-  <body>
+</head>
+<body>
     <div class="container">
-      <header class="header">
-        <div class="header-content">
-          <h1>Gerenciador de Usuários</h1>
-          <button id="btnAdd" class="btn-primary">
-            <i class="fas fa-plus"></i> Novo Usuário
-          </button>
-        </div>
-      </header>
+        <!-- Header Principal -->
+        <header class="main-header">
+            <div class="header-left">
+                <h1 class="logo">S4Blog</h1>
+                <nav class="main-nav">
+                    <a href="#" class="nav-link active">Minhas publicações</a>
+                </nav>
+            </div>
+            <div class="header-right">
+                <button id="btnAdd" class="btn-create">
+                    <i class="fas fa-plus"></i> Criar postagem
+                </button>
+            </div>
+        </header>
 
-      <main>
-        <div class="search-container">
-          <div class="search-box">
-            <i class="fas fa-search"></i>
-            <input
-              type="text"
-              id="searchInput"
-              placeholder="Buscar por nome ou e-mail..."
-            />
-          </div>
-        </div>
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Lista de Posts -->
+            <div class="posts-section">
+                <div class="posts-header">
+                    <h2>Minhas publicações</h2>
+                </div>
 
-        <div class="cards-grid" id="listaUsuarios"></div>
+                <div class="posts-grid" id="listaPosts">
+                    <!-- Posts serão carregados via JavaScript -->
+                </div>
 
-        <div class="empty-state" id="emptyState">
-          <i class="fas fa-users-slash"></i>
-          <h3>Nenhum usuário encontrado</h3>
-          <p>Clique em "Novo Usuário" para começar.</p>
-        </div>
-      </main>
+                <div class="empty-state" id="emptyState">
+                    <i class="fas fa-newspaper"></i>
+                    <h3>Nenhuma postagem encontrada</h3>
+                    <p>Clique em "Criar postagem" para começar.</p>
+                </div>
+            </div>
+        </main>
     </div>
 
-    <!-- Modal -->
+    <!-- Modal Criar/Editar Postagem -->
     <div class="modal-overlay" id="modalOverlay">
-      <div class="modal">
-        <div class="modal-header">
-          <h2 id="modalTitle">Novo Usuário</h2>
-          <button id="btnFechar" class="close-btn">
-            <i class="fas fa-times"></i>
-          </button>
+        <div class="modal">
+            <div class="modal-header">
+                <h2 id="modalTitle">Criar postagem</h2>
+                <p>Preencha os dados para criar uma postagem</p>
+                <button id="btnFechar" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <form id="formPost" class="modal-form">
+                <div class="form-group">
+                    <label for="autor">Nome do autor</label>
+                    <input
+                        type="text"
+                        id="autor"
+                        placeholder="Informe o nome"
+                        required
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="titulo">Título</label>
+                    <input
+                        type="text"
+                        id="titulo"
+                        placeholder="Informe o título"
+                        required
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="categoria">Categoria</label>
+                    <input
+                        type="text"
+                        id="categoria"
+                        placeholder="Informe a categoria"
+                        required
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="imagem">URL imagem</label>
+                    <input
+                        type="url"
+                        id="imagem"
+                        placeholder="Informe o URL da capa"
+                        required
+                    />
+                </div>
+
+                <div class="form-group">
+                    <label for="conteudo">Conteúdo</label>
+                    <textarea
+                        id="conteudo"
+                        placeholder="Digite o conteúdo"
+                        rows="4"
+                        required
+                    ></textarea>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" id="btnCancelar" class="btn-cancel">
+                        Cancelar
+                    </button>
+                    <button type="submit" class="btn-save">
+                        <i class="fas fa-check"></i> Salvar
+                    </button>
+                </div>
+            </form>
         </div>
-        <form id="formUsuario" class="modal-form">
-          <div class="input-group">
-            <label for="nome">Nome</label>
-            <input
-              type="text"
-              id="nome"
-              placeholder="Ex: Maria Silva"
-              required
-            />
-          </div>
-          <div class="input-group">
-            <label for="email">E-mail</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Ex: maria@exemplo.com"
-              required
-            />
-          </div>
-          <div class="modal-actions">
-            <button type="button" id="btnCancelar" class="btn-outline">
-              Cancelar
-            </button>
-            <button type="submit" class="btn-primary">
-              <i class="fas fa-check"></i> Salvar
-            </button>
-          </div>
-        </form>
-      </div>
     </div>
 
+    <!-- Modal Confirmar Exclusão -->
+    <div class="modal-overlay" id="deleteModalOverlay">
+        <div class="modal delete-modal">
+            <div class="modal-header">
+                <h2>Excluir postagem</h2>
+                <p>Tem certeza que deseja excluir esta postagem?</p>
+                <button id="btnFecharDelete" class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <p class="warning-text">ao clicar em sim o processo não pode ser desfeito.</p>
+                <div class="post-preview">
+                    <h4 id="postTitlePreview">Como o React.JS mudou a forma de construir sistemas modernos?</h4>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" id="btnCancelarDelete" class="btn-cancel">
+                    Cancelar
+                </button>
+                <button type="button" id="btnConfirmarDelete" class="btn-confirm-delete">
+                    Excluir
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
     <script src="../../scripts/jsADM/admScript.js"></script>
-  </body>
+</body>
 </html>
