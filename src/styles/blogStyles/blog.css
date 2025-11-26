@@ -24,92 +24,99 @@ body {
 
 .header {
     width: 100%;
-    background: #fff;
-    color: #111;
-    padding: 20px 0;
-    position: relative;
-    z-index: 1;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: #0f0b26;
+    color: #fff;
+    padding: 0;
+    padding-bottom: 150px; /* AUMENTEI de 80px para 150px */
 }
 
-.header-content {
+/* TOPO DO HEADER - LOGO E MENU */
+.header-top {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 60px;
+    padding: 20px 60px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .logo {
     font-size: 24px;
-    color: #0f0b26;
+    color: #f2c94c;
     font-weight: bold;
+    margin: 0;
 }
 
 .menu {
     display: flex;
     gap: 30px;
+    align-items: center;
 }
 
-.menu a {
-    color: #333;
+.menu-item {
+    color: #fff;
     text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.menu-item:hover {
+    opacity: 1;
+}
+
+.menu-icon {
+    color: #6b5eff;
     font-size: 16px;
-    font-weight: 500;
+    display: inline-block;
+}
+
+/* SEÇÃO VOLTAR */
+.back-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 60px 20px;
+}
+
+.back-link {
+    color: #6b5eff;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     transition: color 0.3s ease;
 }
 
-.menu a:hover {
-    color: #6b5eff;
+.back-link:hover {
+    color: #8a7dff;
 }
 
-.reset-btn {
-    background: #6b5eff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.reset-btn:hover {
-    background: #5a4fe0;
+.back-arrow {
+    font-size: 18px;
+    font-weight: bold;
 }
 
 /* ------------------------------ */
 /* CONTEÚDO PRINCIPAL */
 /* ------------------------------ */
 
+/* garante sobreposição do conteúdo (main) sobre o header */
 .main-content {
     flex: 1;
     position: relative;
     z-index: 2;
-    margin-top: 0; /* Mude de -120px para 0 */
+    margin-top: -120px; /* ajuste fino: aumentar valor negativo sobe mais */
 }
 
-/* ------------------------------ */
-/* VOLTAR */
-/* ------------------------------ */
+/* garante que a imagem fique acima do header */
 
-.back {
-    padding: 40px 60px 20px;
-    font-size: 14px;
-    color: #6b5eff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
 
-.back span {
-    margin-right: 5px;
-    font-size: 18px;
-}
+
 
 /* ------------------------------ */
 /* IMAGEM CENTRALIZADA */
@@ -127,21 +134,23 @@ body {
     position: relative;
     width: 80%;
     max-width: 800px;
-    height: 250px; /* Altura reduzida */
+    height: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    z-index: 3; /* Garante que a imagem fique acima dos elementos */
+}
+
+.imagem-centralizada {
+    position: relative;
+    z-index: 3;
+    width: 1000%;
+    max-width: 1000px;
+    height: 300px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-
-.imagem-personalizada {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    border: none;
-    border-radius: 8px;
-}
-
 /* ------------------------------ */
 /* CONTEÚDO PRINCIPAL */
 /* ------------------------------ */
@@ -214,12 +223,17 @@ body {
 }
 
 /* ------------------------------ */
-/* RODAPÉ COM ARTIGOS RELACIONADOS */
+/* RODAPÉ FINAL */
 /* ------------------------------ */
 
 .footer {
-    background: #f8f9fa;
+    background: #0f0b26;
     margin-top: auto;
+    color: white;
+}
+
+.footer-content {
+    width: 100%;
 }
 
 /* ARTIGOS RELACIONADOS */
@@ -232,8 +246,8 @@ body {
 
 .related h2 {
     font-size: 26px;
-    margin-bottom: 25px;
-    color: #0f0b26;
+    margin-bottom: 30px;
+    color: #ffffff;
     text-align: center;
 }
 
@@ -243,23 +257,22 @@ body {
     gap: 25px;
 }
 
-/* CARD */
+/* CARD COM IMAGEM */
 .rel-card {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .rel-card:hover {
     transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .rel-img {
     width: 100%;
     height: 160px;
-    border-radius: 10px 10px 0 0;
     overflow: hidden;
 }
 
@@ -274,83 +287,76 @@ body {
     transform: scale(1.05);
 }
 
+.rel-content {
+    padding: 20px;
+}
+
 .rel-cat {
-    font-size: 12px;
+    font-size: 11px;
     color: #6b5eff;
-    margin: 15px 15px 5px;
-    display: inline-block;
     font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .rel-title {
-    font-size: 18px;
-    margin: 0 15px 10px;
+    font-size: 16px;
+    margin: 0 0 12px 0;
     line-height: 1.4;
-    color: #0f0b26;
+    color: #ffffff;
+    font-weight: 600;
 }
 
 .rel-meta {
-    font-size: 13px;
-    color: #555;
-    margin: 0 15px 15px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
 }
 
-/* ------------------------------ */
-/* RODAPÉ FINAL */
-/* ------------------------------ */
-
+/* RODAPÉ INFERIOR */
 .footer-final {
     width: 100%;
     background: #0f0b26;
     color: white;
     padding: 50px 60px;
     display: grid;
-    grid-template-columns: 2fr 1fr 60px;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
     align-items: start;
-    position: relative;
 }
 
-.footer-left h2 {
-    margin: 0 0 10px;
+.footer-brand h2 {
+    margin: 0 0 15px;
+    color: #f2c94c;
+    font-size: 24px;
+}
+
+.footer-brand p {
+    max-width: 400px;
+    opacity: 0.8;
+    line-height: 1.5;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-menu h3 {
+    margin-bottom: 15px;
+    font-size: 16px;
     color: #f2c94c;
 }
 
-.footer-left p {
-    max-width: 400px;
-    opacity: 0.8;
-}
-
-.footer-right h3 {
-    margin-bottom: 10px;
-}
-
-.footer-right a {
+.footer-menu a {
     display: block;
-    color: #f1f1f1;
-    margin-bottom: 6px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 8px;
     text-decoration: none;
-    opacity: 0.8;
+    transition: color 0.3s ease;
 }
 
-.footer-right a:hover {
-    opacity: 1;
-}
-
-.scroll-top {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    border: none;
-    background: #fff;
-    color: #0f0b26;
-    font-size: 22px;
-    cursor: pointer;
-    margin-left: auto;
-    transition: all 0.3s ease;
-}
-
-.scroll-top:hover {
-    background: #f2c94c;
+.footer-menu a:hover {
+    color: #ffffff;
 }
 
 /* ------------------------------ */
@@ -361,9 +367,10 @@ body {
     .related-grid {
         grid-template-columns: 1fr 1fr;
     }
-
+    
     .footer-final {
-        grid-template-columns: 1fr 1fr 50px;
+        grid-template-columns: 1fr 1fr;
+        padding: 40px 30px;
     }
     
     .conteudo-principal {
@@ -377,22 +384,25 @@ body {
 
 @media (max-width: 650px) {
     .header {
-        padding: 100px 0 40px;
+        padding-bottom: 120px;
     }
     
-    .header-content {
+    .header-top {
+        padding: 15px 20px 10px;
         flex-direction: column;
-        text-align: center;
         gap: 15px;
-        padding: 0 20px;
+    }
+
+    .menu {
+        gap: 20px;
+    }
+
+    .back-section {
+        padding: 10px 20px 15px;
     }
 
     .main-content {
         margin-top: -100px;
-    }
-
-    .back {
-        padding: 20px 20px 10px;
     }
 
     .imagem-centralizada {
@@ -406,19 +416,26 @@ body {
 
     .related-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .related {
+        padding: 40px 15px 30px;
+        width: 95%;
     }
 
     .footer-final {
         grid-template-columns: 1fr;
         text-align: center;
         padding: 30px 20px;
+        gap: 30px;
     }
 
-    .scroll-top {
-        margin: 20px auto 0;
+    .footer-brand p {
+        max-width: 100%;
     }
     
-    .menu a {
-        margin: 0 10px;
+    .menu-item {
+        font-size: 13px;
     }
 }
