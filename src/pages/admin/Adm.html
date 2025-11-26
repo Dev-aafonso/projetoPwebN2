@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>S4Blog - Minhas Publicações</title>
+
+    <!-- Importação de estilos -->
     <link rel="stylesheet" href="../../styles/admStyles/adm.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
@@ -15,30 +17,38 @@
     />
   </head>
   <body>
+    <!-- Container principal -->
     <div class="container">
       <!-- Header Principal -->
       <header class="main-header">
         <div class="header-top">
           <h1 class="logo">S4Blog</h1>
-          <div class="user-welcome">Bem-vindos, <strong>Afonso Filho & Luiz Thomas</strong></div>
+          <!-- Mensagem de boas-vindas -->
+          <div class="user-welcome">
+            Bem-vindos, <strong>Afonso Filho & Luiz Thomas</strong>
+          </div>
         </div>
       </header>
 
       <!-- Conteúdo Principal -->
       <main class="main-content">
-        <!-- Cabeçalho das Publicações -->
+        <!-- Cabeçalho da seção de publicações -->
         <div class="posts-section-header">
           <h2>Minhas publicações</h2>
+          <!-- Botão para criar novo post -->
           <button id="btnAdd" class="btn-create">
             <i class="fas fa-plus"></i> Novo post
           </button>
         </div>
 
-        <!-- Lista de Posts -->
+        <!-- Seção de posts -->
         <div class="posts-section">
+          <!-- Grid onde os posts serão carregados dinamicamente -->
           <div class="posts-grid" id="listaPosts">
             <!-- Posts carregados via JavaScript -->
           </div>
+
+          <!-- Estado vazio (mostrado quando não há posts) -->
           <div class="empty-state" id="emptyState">
             <i class="fas fa-newspaper"></i>
             <h3>Nenhuma postagem encontrada</h3>
@@ -48,17 +58,21 @@
       </main>
     </div>
 
-    <!-- Modal Criar/Editar Postagem -->
+    <!-- Modal para Criar/Editar Postagem -->
     <div class="modal-overlay" id="modalOverlay">
       <div class="modal">
         <div class="modal-header">
           <h2 id="modalTitle">Criar postagem</h2>
           <p>Preencha os dados para criar uma postagem</p>
+          <!-- Botão para fechar o modal -->
           <button id="btnFechar" class="close-btn">
             <i class="fas fa-times"></i>
           </button>
         </div>
+
+        <!-- Formulário do post -->
         <form id="formPost" class="modal-form">
+          <!-- Campo nome do autor -->
           <div class="form-group">
             <label for="autor">Nome do autor</label>
             <input
@@ -68,6 +82,8 @@
               required
             />
           </div>
+
+          <!-- Campo título do post -->
           <div class="form-group">
             <label for="titulo">Título</label>
             <input
@@ -77,6 +93,8 @@
               required
             />
           </div>
+
+          <!-- Campo categoria -->
           <div class="form-group">
             <label for="categoria">Categoria</label>
             <input
@@ -86,6 +104,8 @@
               required
             />
           </div>
+
+          <!-- Campo URL da imagem -->
           <div class="form-group">
             <label for="imagem">URL imagem</label>
             <input
@@ -95,6 +115,8 @@
               required
             />
           </div>
+
+          <!-- Campo conteúdo do post -->
           <div class="form-group">
             <label for="conteudo">Conteúdo</label>
             <textarea
@@ -104,6 +126,8 @@
               required
             ></textarea>
           </div>
+
+          <!-- Botão de ação do formulário -->
           <div class="modal-actions">
             <button type="submit" class="btn-save">
               <i class="fas fa-check"></i> Salvar
@@ -113,27 +137,35 @@
       </div>
     </div>
 
-    <!-- Modal Confirmar Exclusão -->
+    <!-- Modal de Confirmação de Exclusão -->
     <div class="modal-overlay" id="deleteModalOverlay">
       <div class="modal delete-modal">
         <div class="modal-header">
           <h2>Excluir postagem</h2>
           <p>Tem certeza que deseja excluir esta postagem?</p>
+          <!-- Botão para fechar modal de exclusão -->
           <button id="btnFecharDelete" class="close-btn">
             <i class="fas fa-times"></i>
           </button>
         </div>
+
         <div class="modal-body">
+          <!-- Aviso de que a ação não pode ser desfeita -->
           <p class="warning-text">
             ao clicar em sim o processo não pode ser desfeito.
           </p>
+
+          <!-- Preview do post que será excluído -->
           <div class="post-preview">
             <h4 id="postTitlePreview">
               Como o React.JS mudou a forma de construir sistemas modernos?
             </h4>
           </div>
         </div>
+
+        <!-- Ações do modal de exclusão -->
         <div class="modal-actions delete-actions">
+          <!-- Botão para confirmar exclusão -->
           <button
             type="button"
             id="btnConfirmarDelete"
@@ -141,6 +173,8 @@
           >
             Excluir
           </button>
+
+          <!-- Botão para cancelar exclusão -->
           <button type="button" id="btnCancelarDelete" class="btn-cancel">
             Cancelar
           </button>
@@ -148,6 +182,7 @@
       </div>
     </div>
 
+    <!-- Script JavaScript principal -->
     <script src="../../scripts/jsADM/admScript.js"></script>
   </body>
 </html>

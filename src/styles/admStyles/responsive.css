@@ -1,19 +1,20 @@
-/* RESPONSIVIDADE COMPLETA */
+/* ===== RESPONSIVIDADE ===== */
 
-/* Tablets Grandes e Laptops Pequenos */
+/* Tablets Grandes e Laptops Pequenos (1200px para baixo) */
 @media (max-width: 1200px) {
   .container {
-    padding: 0 20px;
+    padding: 0 20px; /* Padding um pouco menor */
   }
 
   .posts-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas em vez de 3 */
+    gap: 20px; /* Espaço um pouco menor */
   }
 }
 
-/* Tablets */
+/* Tablets (1024px para baixo) */
 @media (max-width: 1024px) {
+  /* Ajusta variáveis CSS para tablets */
   :root {
     --page-pad: 20px;
     --gap: 20px;
@@ -21,50 +22,51 @@
 
   .main-header {
     padding: 24px 0;
-    margin-bottom: 32px;
+    margin-bottom: 32px; /* Espaços menores */
   }
 
   .posts-section-header h2 {
-    font-size: 22px;
+    font-size: 22px; /* Fonte um pouco menor */
   }
 
   .post-image {
-    height: 140px;
+    height: 140px; /* Imagens um pouco menores */
   }
 }
 
-/* Tablets Pequenos */
+/* Tablets Pequenos (900px para baixo) */
 @media (max-width: 900px) {
   .header-top {
-    flex-direction: column;
+    flex-direction: column; /* Empilha logo e usuário */
     align-items: flex-start;
     text-align: left;
   }
 
   .user-welcome {
-    text-align: left;
+    text-align: left; /* Alinha à esquerda */
   }
 
   .posts-section-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; /* Alinha à esquerda */
   }
 
   .btn-create {
-    width: 100%;
+    width: 100%; /* Botão ocupa largura total */
     justify-content: center;
   }
 }
 
-/* Mobile Large */
+/* Tamanho Mobile (768px para baixo) */
 @media (max-width: 768px) {
+  /* Ajusta variáveis para mobile */
   :root {
     --page-pad: 16px;
     --gap: 16px;
   }
 
   body {
-    font-size: 15px;
+    font-size: 15px; /* Fonte base um pouco menor */
   }
 
   .container {
@@ -79,7 +81,7 @@
   .header-top {
     flex-direction: column;
     gap: 12px;
-    text-align: center;
+    text-align: center; /* Centraliza no mobile */
   }
 
   .logo {
@@ -110,13 +112,13 @@
   }
 
   .posts-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* 1 coluna no mobile */
     gap: 16px;
     margin-bottom: 32px;
   }
 
   .post-card {
-    border-radius: 10px;
+    border-radius: 10px; /* Border radius um pouco menor */
   }
 
   .post-image {
@@ -128,7 +130,7 @@
   }
 
   .post-actions {
-    flex-direction: column;
+    flex-direction: column; /* Botões empilhados */
     gap: 8px;
     padding: 12px 14px;
   }
@@ -140,7 +142,7 @@
   }
 
   .modal {
-    max-width: 95%;
+    max-width: 95%; /* Modal quase ocupa toda tela */
     margin: 0 10px;
     max-height: 95vh;
   }
@@ -154,7 +156,7 @@
   }
 
   .empty-state {
-    padding: 60px 16px;
+    padding: 60px 16px; /* Padding menor no mobile */
   }
 
   .empty-state i {
@@ -171,13 +173,13 @@
   }
 
   .btn-carregar-mais {
-    width: 100%;
+    width: 100%; /* Botão ocupa largura total */
     margin: 32px auto 0;
     padding: 14px 24px;
   }
 }
 
-/* Mobile Medium */
+/* Mobile Médio (480px para baixo) */
 @media (max-width: 480px) {
   :root {
     --page-pad: 12px;
@@ -185,7 +187,7 @@
 
   body {
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.5; /* Linha um pouco mais compacta */
   }
 
   .container {
@@ -194,14 +196,14 @@
 
   .modal {
     margin: 0;
-    max-width: 100%;
-    border-radius: 0;
+    max-width: 100%; /* Modal ocupa 100% da tela */
+    border-radius: 0; /* Remove bordas arredondadas */
     max-height: 100vh;
-    height: 100vh;
+    height: 100vh; /* Ocupa altura total da tela */
   }
 
   .modal-overlay {
-    padding: 0;
+    padding: 0; /* Remove padding do overlay */
   }
 
   .modal-header,
@@ -212,7 +214,7 @@
 
   .modal-header h2 {
     font-size: 17px;
-    padding-right: 35px;
+    padding-right: 35px; /* Menos espaço para botão fechar */
   }
 
   .modal-header p {
@@ -224,12 +226,12 @@
     top: 12px;
     right: 12px;
     width: 30px;
-    height: 30px;
+    height: 30px; /* Botão fechar menor */
   }
 
   .modal-actions {
     padding: 12px 16px 16px 16px;
-    flex-direction: column;
+    flex-direction: column; /* Botões empilhados */
     gap: 8px;
   }
 
@@ -237,7 +239,7 @@
   .btn-cancel {
     width: 100%;
     justify-content: center;
-    min-height: 46px;
+    min-height: 46px; /* Botões mais altos para toque */
     font-size: 15px;
   }
 
@@ -287,6 +289,7 @@
     font-size: 15px;
   }
 
+  /* Previne zoom no iOS em inputs */
   .form-group input,
   .form-group textarea {
     font-size: 16px;
@@ -294,7 +297,7 @@
   }
 }
 
-/* Mobile Small */
+/* Mobile Pequeno (360px para baixo) */
 @media (max-width: 360px) {
   :root {
     --page-pad: 10px;
@@ -317,7 +320,7 @@
   }
 
   .post-image {
-    height: 120px;
+    height: 120px; /* Imagens ainda menores */
   }
 
   .post-content {
@@ -325,7 +328,7 @@
   }
 
   .post-meta {
-    flex-direction: column;
+    flex-direction: column; /* Meta informações empilhadas */
     align-items: flex-start;
     gap: 6px;
   }
@@ -341,7 +344,7 @@
   }
 
   .empty-state {
-    padding: 40px 12px;
+    padding: 40px 12px; /* Padding ainda menor */
   }
 
   .empty-state i {
@@ -358,15 +361,15 @@
   }
 }
 
-/* Orientação Landscape para Mobile */
+/* Orientação Landscape para Mobile (telas mais largas que altas) */
 @media (max-height: 500px) and (orientation: landscape) {
   .modal {
-    max-height: 85vh;
+    max-height: 85vh; /* Modal mais baixo */
     margin: 20px 0;
   }
 
   .modal-overlay {
-    align-items: flex-start;
+    align-items: flex-start; /* Alinha ao topo */
     padding: 10px;
   }
 
@@ -375,17 +378,17 @@
   }
 
   .form-group {
-    margin-bottom: 12px;
+    margin-bottom: 12px; /* Menos espaço entre campos */
   }
 
   .form-group textarea {
-    min-height: 80px;
+    min-height: 80px; /* Textarea mais baixa */
   }
 }
 
-/* High DPI Screens */
+/* High DPI Screens (telas retina) */
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .logo::before {
-    transform: translateY(-50%) scale(0.75);
+    transform: translateY(-50%) scale(0.75); /* Linha mais fina em telas retina */
   }
 }

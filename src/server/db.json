@@ -64,22 +64,49 @@
       "data": "2025-11-20T18:38:22.217Z"
     },
     {
-      "id": "e9f7",
-      "autor": "Afonso",
+      "autor": "Afonso Filho",
       "titulo": "Inteligencia artificial, robótica y mujeres: una nueva revolución",
       "categoria": "Tecnologia",
       "imagem": "https://www.clarin.com/img/2018/10/03/PV6KmBOO4_1256x620__1.jpg",
       "conteudo": "Las nuevas tecnologías están cambiando rápidamente el mundo que conocemos y avanzan mucho más rápido que los cambios sociales, jurídicos y hasta que nuestra propia capacidad de asimilarlos.",
-      "data": "2025-11-20T18:39:17.019Z"
+      "data": "2025-11-20T18:39:17.019Z",
+      "id": "e9f7"
     },
     {
-      "autor": "Afonso",
-      "titulo": "Los 5 avances tecnológicos más esperados en este 2024",
-      "categoria": "Tecnologia",
-      "imagem": "https://media.radio10.com.ar/p/764fdc857be19cd03163f75fb04a1041/adjuntos/220/imagenes/041/433/0041433265/730x0/smart/tendencias-futuro-tecnologia-2024-643x342jpg.jpg",
-      "conteudo": "Las empresas trabajan incansablemente en crear y adaptarse a las distintas tendencias. En los últimos años, se ha observado un vertiginoso progreso en diversas áreas tecnológicas, acercándonos a nuevas e innovadoras tendencias a un ritmo sin precedentes. Estas tendencias están dejando su huella desde nuestra vida cotidiana hasta la forma en que las principales industrias manejan sus operaciones.",
-      "data": "2025-11-20T18:39:52.336Z",
-      "id": "4983"
+      "id": "6d83",
+      "autor": "Luiz Thomas",
+      "titulo": "Por que estudar informática?",
+      "categoria": "Informática",
+      "imagem": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhUDdR0ZT8j6zT2tVU4JkvScpRT7-7krDkfrEl18Pmr3TkblpOD_lb7n_7p5ujLGEcjHHTEZiCv8R8brLqbtxtP_CBjUhgSyEo5CD5karHbCjynSOp_aOTxSwZDPhwhfdcCux1KjsV71aQW/s400/informatica.jpg",
+      "conteudo": "Com o passar dos anos, a informática acabou adquirindo cada vez mais importância, não só na vida das pessoas como nas empresas. Sua utilização pode ser vista como utensílio de aprendizagem e sua ação no meio social vêm aumentando de forma rápida entre as pessoas\n\nTer um curso de informática em seu currículo irá te oferecer muitas vantagens. Isso porque, quanto mais conhecimento você tiver na área, mais serão as chances de se destacar nos processos de seleção que são mais concorridos.",
+      "data": "2025-11-26T13:45:56.105Z"
+    },
+    {
+      "id": "2337",
+      "autor": "Luiz Thomas",
+      "titulo": "O que é computação?",
+      "categoria": "Informática",
+      "imagem": "https://conceitosdomundo.pt/wp-content/uploads/2021/10/informatica.jpg",
+      "conteudo": "Informática ou computação é a ciência que estuda os métodos e técnicas de armazenamento, processamento e transmissão de informações de forma automatizada e, mais especificamente, em formato digital por meio de sistemas informatizados.\n\nNa verdade, não existe uma definição única e universal do que seja a computação, talvez por ser uma das ciências de origem mais recente, embora de desenvolvimento mais rápido e desenfreado.",
+      "data": "2025-11-26T13:46:30.504Z"
+    },
+    {
+      "id": "38b9",
+      "autor": "Luiz Thomas",
+      "titulo": "Informática: Tudo o que você precisa saber",
+      "categoria": "Informática",
+      "imagem": "https://mestresdainformatica.com.br/wp-content/webp-express/webp-images/uploads/2022/05/Tudo-o-que-voce-precisa-saber-sobre-informatica.png.webp",
+      "conteudo": "A computação é um campo de informação digital que inclui o processo de coleta, armazenamento, processamento, transmissão e disseminação de dados.\n\n\nO termo é uma combinação das palavras informação e automático e, portanto, pode ser generalizado para informação processada por meios automáticos.\n\nA tecnologia da informação e suas inovações e seus dispositivos fazem parte de todas as esferas de nossas vidas, ferramentas de trabalho, estudo e lazer.",
+      "data": "2025-11-26T13:47:09.493Z"
+    },
+    {
+      "id": "9b52",
+      "autor": "Luiz Thomas",
+      "titulo": "Informática Básica: Guia Completo de tudo o que você precisa saber",
+      "categoria": "Informática",
+      "imagem": "https://cursoseducaweb.com.br/images/blog/informatica-basica-2.JPG",
+      "conteudo": "A tecnologia é o ponto principal do mercado, da sociedade e da cultura na era digital. Dessa forma, sem o conhecimento fundamental dessa área, torna-se difícil acompanhar as mudanças do mundo e participar dos setores profissionais.\n\nPor isso, é necessário aprender os conceitos e práticas essenciais da informática. Assim, neste artigo você descobrirá um guia completo sobre o assunto e conhecerá um curso online gratuito de excelência para se formar. Acompanhe a leitura!",
+      "data": "2025-11-26T13:47:57.060Z"
     }
   ]
 }

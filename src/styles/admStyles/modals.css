@@ -1,42 +1,45 @@
-/* MODAIS */
+/* ===== OVERLAY DOS MODAIS ===== */
 .modal-overlay {
-  display: none;
+  display: none; /* Escondido por padrão */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 1000; /* Acima de todos os elementos */
   padding: 20px;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px); /* Efeito de desfoque no fundo */
 }
 
 .modal-overlay.active {
-  display: flex;
+  display: flex; /* Mostra quando ativo */
 }
 
+/* ===== MODAL PRINCIPAL ===== */
 .modal {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--modal-radius);
   width: 100%;
-  max-width: 420px;
-  max-height: 90vh;
-  overflow-y: auto;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  animation: modalSlideIn 0.25s ease-out;
+  max-width: 420px; /* Largura máxima */
+  max-height: 90vh; /* Altura máxima */
+  overflow-y: auto; /* Scroll vertical se necessário */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15); /* Sombra pronunciada */
+  animation: modalSlideIn 0.25s ease-out; /* Animação de entrada */
 }
 
+/* Modal de delete um pouco menor */
 .delete-modal {
   max-width: 380px;
 }
 
+/* ===== CABEÇALHO DO MODAL ===== */
 .modal-header {
   padding: 20px 20px 12px 20px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border); /* Linha separadora */
   position: relative;
 }
 
@@ -45,16 +48,17 @@
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 4px;
-  padding-right: 40px;
+  padding-right: 40px; /* Espaço para o botão fechar */
 }
 
 .modal-header p {
   font-size: 14px;
   color: var(--text-secondary);
   margin-bottom: 0;
-  padding-right: 40px;
+  padding-right: 40px; /* Espaço para o botão fechar */
 }
 
+/* ===== BOTÃO FECHAR ===== */
 .close-btn {
   position: absolute;
   top: 16px;
@@ -71,7 +75,7 @@
   justify-content: center;
   border-radius: 6px;
   transition: all 0.2s ease;
-  z-index: 1;
+  z-index: 1; /* Acima do conteúdo */
 }
 
 .close-btn:hover {
@@ -79,12 +83,13 @@
   color: var(--text-primary);
 }
 
+/* ===== FORMULÁRIO DO MODAL ===== */
 .modal-form {
   padding: 20px;
 }
 
 .form-group {
-  margin-bottom: 16px;
+  margin-bottom: 16px; /* Espaço entre campos */
 }
 
 .form-group label {
@@ -106,8 +111,8 @@
   font-size: 14px;
   font-family: "Inter", sans-serif;
   transition: all 0.2s ease;
-  resize: vertical;
-  min-height: 44px;
+  resize: vertical; /* Permite redimensionar apenas verticalmente */
+  min-height: 44px; /* Altura mínima para toque */
 }
 
 .form-group input:focus,
@@ -115,7 +120,7 @@
   outline: none;
   border-color: var(--primary);
   background: var(--surface);
-  box-shadow: 0 0 0 3px rgba(112, 99, 240, 0.1);
+  box-shadow: 0 0 0 3px rgba(112, 99, 240, 0.1); /* Sombra de foco */
 }
 
 .form-group input::placeholder,
@@ -124,15 +129,15 @@
 }
 
 .form-group textarea {
-  min-height: 120px;
+  min-height: 120px; /* Altura mínima para textarea */
 }
 
-/* AÇÕES DO MODAL PRINCIPAL */
+/* ===== AÇÕES DO MODAL PRINCIPAL ===== */
 .modal-actions {
   padding: 16px 20px 20px 20px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border); /* Linha separadora */
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-end; /* Botão à direita */
 }
 
 .btn-cancel {
@@ -148,7 +153,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  min-height: 44px;
+  min-height: 44px; /* Altura mínima para toque */
 }
 
 .btn-cancel:hover {
@@ -169,7 +174,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  width: 100%;
+  width: 100%; /* Ocupa largura total */
   min-height: 44px;
   justify-content: center;
 }
@@ -180,7 +185,7 @@
   transform: translateY(-1px);
 }
 
-/* MODAL BODY PARA DELETE */
+/* ===== CORPO DO MODAL DE DELETE ===== */
 .modal-body {
   padding: 0 20px;
 }
@@ -198,7 +203,7 @@
   border-radius: 6px;
   padding: 16px;
   margin-bottom: 20px;
-  word-break: break-word;
+  word-break: break-word; /* Quebra palavras longas */
 }
 
 .post-preview h4 {
@@ -209,16 +214,17 @@
   margin: 0;
 }
 
-/* MODAL DELETE - BOTÕES VERTICAIS SEM SEPARAÇÕES */
+/* ===== MODAL DELETE - BOTÕES VERTICAIS SEM SEPARAÇÕES ===== */
 .modal-actions.delete-actions {
   padding: 16px 20px 20px 20px;
-  border-top: none;
+  border-top: none; /* Remove linha de separação */
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  flex-direction: column; /* Botões em coluna */
+  gap: 12px; /* Espaço entre botões */
   justify-content: flex-start;
 }
 
+/* Remove bordas do modal de delete */
 .modal.delete-modal .modal-header {
   border-bottom: none;
   padding-bottom: 0;
@@ -228,6 +234,7 @@
   padding-top: 0;
 }
 
+/* Estilo específico do botão cancelar no modal de delete */
 .modal-actions.delete-actions .btn-cancel {
   background: var(--primary);
   color: var(--white);
@@ -250,6 +257,7 @@
   transform: translateY(-1px);
 }
 
+/* Botão de confirmar exclusão */
 .btn-confirm-delete {
   background: var(--danger);
   color: var(--white);
@@ -272,6 +280,7 @@
   transform: translateY(-1px);
 }
 
+/* Botões do modal de delete ocupam largura total */
 .modal-actions.delete-actions .btn-confirm-delete,
 .modal-actions.delete-actions .btn-cancel {
   width: 100%;
@@ -279,9 +288,9 @@
   text-align: center;
 }
 
-/* Scrollbar personalizada para modal */
+/* ===== SCROLLBAR PERSONALIZADA PARA MODAL ===== */
 .modal::-webkit-scrollbar {
-  width: 6px;
+  width: 6px; /* Largura fina */
 }
 
 .modal::-webkit-scrollbar-track {

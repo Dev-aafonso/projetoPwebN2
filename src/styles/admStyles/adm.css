@@ -1,6 +1,27 @@
-/* Arquivo Principal - Importa todos os módulos CSS */
-@import url("base.css");
-@import url("layout.css");
-@import url("components.css");
-@import url("modals.css");
-@import url("responsive.css");
+/* ===== ARQUIVO PRINCIPAL DO ADMIN ===== */
+
+/* Este arquivo importa todos os módulos CSS */
+
+/* 1. Base - Reset, variáveis e estilos fundamentais */
+@import url('base.css');
+
+/* 2. Layout - Estrutura, grid e componentes de layout */
+@import url('layout.css');
+
+/* 3. Components - Botões, cards e componentes reutilizáveis */
+@import url('components.css');
+
+/* 4. Modals - Estilos específicos de modais e formulários */
+@import url('modals.css');
+
+/* 5. Responsive - Media queries e ajustes para diferentes telas */
+@import url('responsive.css');
+
+/* 
+Ordem de importação importante:
+1. Base → Define fundamentos
+2. Layout → Define estrutura  
+3. Components → Componentes que usam layout
+4. Modals → Específicos que podem sobrescrever componentes
+5. Responsive → Ajustes que sobrescrevem todos os anteriores
+*/
