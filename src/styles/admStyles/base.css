@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #7063f0;
+  --primary-hover: #5a4bec;
+  --background: #ffffff;
+  --surface: #ffffff;
+  --surface-secondary: #f8f9fa;
+  --surface-tertiary: #e9ecef;
+  --text-primary: #1a1a1a;
+  --text-secondary: #6c757d;
+  --text-tertiary: #adb5bd;
+  --border: #dee2e6;
+  --border-light: #e9ecef;
+  --danger: #f06368;
+  --danger-hover: #e04b50;
+  --white: #ffffff;
+  --maxw: 1200px;
+  --card-radius: 12px;
+  --modal-radius: 8px;
+  --gap: 24px;
+  --page-pad: 24px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animações */
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-16px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Acessibilidade - Foco visível */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+.close-btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Melhoria de performance para animações */
+@media (prefers-reduced-motion: no-preference) {
+  .modal {
+    animation: modalSlideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .post-card,
+  .btn-create,
+  .btn-edit,
+  .btn-delete {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .post-card:hover,
+  .btn-create:hover,
+  .btn-edit:hover,
+  .btn-delete:hover,
+  .btn-carregar-mais:hover,
+  .btn-save:hover,
+  .btn-cancel:hover,
+  .btn-confirm-delete:hover {
+    transform: none;
+  }
+}
