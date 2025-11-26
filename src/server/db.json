@@ -1,15 +1,6 @@
 {
   "posts": [
     {
-      "autor": "Afonso",
-      "titulo": "Áreas da programação: conheça as principais",
-      "categoria": "Tecnologia",
-      "imagem": "https://blog.gokursos.com/wp-content/uploads/2023/05/programming-background-with-person-working-with-codes-computer-1200x800.jpg",
-      "conteudo": "Você conhece a área de programação? É ela que se dedica a criar e desenvolver softwares, aplicativos e sistemas computacionais. A programação envolve a criação de algoritmos, que são instruções que um computador pode seguir para resolver um problema ou realizar uma tarefa específica.",
-      "data": "2025-11-20T18:41:48.598Z",
-      "id": "f30d"
-    },
-    {
       "id": "76bd",
       "autor": "Afonso",
       "titulo": "Programação: 5 profissões que exigem saber programar",
@@ -82,22 +73,13 @@
       "data": "2025-11-20T18:39:17.019Z"
     },
     {
-      "id": "4983",
       "autor": "Afonso",
       "titulo": "Los 5 avances tecnológicos más esperados en este 2024",
       "categoria": "Tecnologia",
       "imagem": "https://media.radio10.com.ar/p/764fdc857be19cd03163f75fb04a1041/adjuntos/220/imagenes/041/433/0041433265/730x0/smart/tendencias-futuro-tecnologia-2024-643x342jpg.jpg",
       "conteudo": "Las empresas trabajan incansablemente en crear y adaptarse a las distintas tendencias. En los últimos años, se ha observado un vertiginoso progreso en diversas áreas tecnológicas, acercándonos a nuevas e innovadoras tendencias a un ritmo sin precedentes. Estas tendencias están dejando su huella desde nuestra vida cotidiana hasta la forma en que las principales industrias manejan sus operaciones.",
-      "data": "2025-11-20T18:39:52.336Z"
-    },
-    {
-      "id": "13a2",
-      "autor": "Afonso",
-      "titulo": "Curso de Informática",
-      "categoria": "Curso",
-      "imagem": "https://www.nacionaleducacao.com.br/upload/service/l8ijYxC7LCybrwDSKzU31L84B5FJBFekSWKUF3DF.jpeg",
-      "conteudo": "O curso de Informática oferecido pelo Nacional Educação é a opção ideal para quem deseja ingressar no mundo da tecnologia de maneira rápida e eficiente, adquirindo as habilidades necessárias para atuar em um mercado que está em constante expansão.",
-      "data": "2025-11-20T20:10:44.034Z"
+      "data": "2025-11-20T18:39:52.336Z",
+      "id": "4983"
     }
   ]
 }

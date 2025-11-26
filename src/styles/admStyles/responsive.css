@@ -1,0 +1,391 @@
+/* RESPONSIVIDADE COMPLETA */
+
+/* Tablets Grandes e Laptops Pequenos */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  :root {
+    --page-pad: 20px;
+    --gap: 20px;
+  }
+  
+  .main-header {
+    padding: 24px 0;
+    margin-bottom: 32px;
+  }
+  
+  .posts-section-header h2 {
+    font-size: 22px;
+  }
+  
+  .post-image {
+    height: 140px;
+  }
+}
+
+/* Tablets Pequenos */
+@media (max-width: 900px) {
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .user-welcome {
+    text-align: left;
+  }
+  
+  .posts-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .btn-create {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Mobile Large */
+@media (max-width: 768px) {
+  :root {
+    --page-pad: 16px;
+    --gap: 16px;
+  }
+  
+  body {
+    font-size: 15px;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+
+  .main-header {
+    padding: 20px 0;
+    margin-bottom: 24px;
+  }
+
+  .header-top {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .user-welcome {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .posts-section-header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .posts-section-header h2 {
+    font-size: 20px;
+  }
+
+  .btn-create {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 15px;
+  }
+
+  .posts-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .post-card {
+    border-radius: 10px;
+  }
+
+  .post-image {
+    height: 160px;
+  }
+
+  .post-content {
+    padding: 14px;
+  }
+
+  .post-actions {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 14px;
+  }
+
+  .btn-edit,
+  .btn-delete {
+    min-height: 40px;
+    font-size: 13px;
+  }
+
+  .modal {
+    max-width: 95%;
+    margin: 0 10px;
+    max-height: 95vh;
+  }
+
+  .modal-actions.delete-actions {
+    flex-direction: column;
+  }
+
+  .modal-actions.delete-actions button {
+    width: 100%;
+  }
+  
+  .empty-state {
+    padding: 60px 16px;
+  }
+  
+  .empty-state i {
+    font-size: 56px;
+    margin-bottom: 20px;
+  }
+  
+  .empty-state h3 {
+    font-size: 18px;
+  }
+  
+  .empty-state p {
+    font-size: 15px;
+  }
+  
+  .btn-carregar-mais {
+    width: 100%;
+    margin: 32px auto 0;
+    padding: 14px 24px;
+  }
+}
+
+/* Mobile Medium */
+@media (max-width: 480px) {
+  :root {
+    --page-pad: 12px;
+  }
+  
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .container {
+    padding: 0 12px;
+  }
+
+  .modal {
+    margin: 0;
+    max-width: 100%;
+    border-radius: 0;
+    max-height: 100vh;
+    height: 100vh;
+  }
+
+  .modal-overlay {
+    padding: 0;
+  }
+
+  .modal-header,
+  .modal-form,
+  .modal-body {
+    padding: 16px;
+  }
+
+  .modal-header h2 {
+    font-size: 17px;
+    padding-right: 35px;
+  }
+
+  .modal-header p {
+    font-size: 13px;
+    padding-right: 35px;
+  }
+
+  .close-btn {
+    top: 12px;
+    right: 12px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .modal-actions {
+    padding: 12px 16px 16px 16px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .btn-save,
+  .btn-cancel {
+    width: 100%;
+    justify-content: center;
+    min-height: 46px;
+    font-size: 15px;
+  }
+
+  .post-image {
+    height: 140px;
+  }
+
+  .post-content {
+    padding: 12px;
+  }
+
+  .post-title {
+    font-size: 15px;
+  }
+
+  .post-excerpt {
+    font-size: 13px;
+  }
+
+  .post-actions {
+    padding: 10px 12px;
+    gap: 6px;
+  }
+
+  .btn-carregar-mais {
+    width: 100%;
+    margin: 24px auto 0;
+  }
+
+  /* Ajustes específicos para mobile no modal delete */
+  .modal.delete-modal .modal-header {
+    padding: 16px 16px 0 16px;
+  }
+
+  .modal.delete-modal .modal-body {
+    padding: 8px 16px 0 16px;
+  }
+
+  .modal-actions.delete-actions {
+    padding: 16px 16px 16px 16px;
+    gap: 8px;
+  }
+  
+  .modal-actions.delete-actions .btn-confirm-delete,
+  .modal-actions.delete-actions .btn-cancel {
+    min-height: 46px;
+    font-size: 15px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px;
+    min-height: 48px;
+  }
+}
+
+/* Mobile Small */
+@media (max-width: 360px) {
+  :root {
+    --page-pad: 10px;
+  }
+  
+  .container {
+    padding: 0 10px;
+  }
+  
+  .logo {
+    font-size: 20px;
+  }
+  
+  .user-welcome {
+    font-size: 14px;
+  }
+  
+  .posts-section-header h2 {
+    font-size: 18px;
+  }
+  
+  .post-image {
+    height: 120px;
+  }
+  
+  .post-content {
+    padding: 10px;
+  }
+  
+  .post-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  
+  .modal-header,
+  .modal-form,
+  .modal-body {
+    padding: 14px;
+  }
+  
+  .modal-actions {
+    padding: 10px 14px 14px 14px;
+  }
+  
+  .empty-state {
+    padding: 40px 12px;
+  }
+  
+  .empty-state i {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+  
+  .empty-state h3 {
+    font-size: 16px;
+  }
+  
+  .empty-state p {
+    font-size: 14px;
+  }
+}
+
+/* Orientação Landscape para Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .modal {
+    max-height: 85vh;
+    margin: 20px 0;
+  }
+  
+  .modal-overlay {
+    align-items: flex-start;
+    padding: 10px;
+  }
+  
+  .modal-form {
+    padding: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 12px;
+  }
+  
+  .form-group textarea {
+    min-height: 80px;
+  }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .logo::before {
+    transform: translateY(-50%) scale(0.75);
+  }
+}

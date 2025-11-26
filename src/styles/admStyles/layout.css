@@ -1,0 +1,116 @@
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--page-pad);
+  width: 100%;
+}
+
+.main-header {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+  position: relative;
+  padding-left: 12px;
+  margin: 0;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 24px;
+  background: var(--primary-hover);
+  border-radius: 2px;
+}
+
+.user-welcome {
+  font-size: 16px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin: 0;
+  text-align: right;
+}
+
+.user-welcome strong {
+  color: var(--primary);
+}
+
+/* Cabeçalho das Publicações */
+.posts-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.posts-section-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+/* Conteúdo Principal */
+.main-content {
+  padding-bottom: 60px;
+  min-height: 60vh;
+}
+
+/* Grid de Posts */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+  margin-bottom: 40px;
+}
+
+/* Estado Vazio */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--text-tertiary);
+}
+
+.empty-state i {
+  font-size: 64px;
+  margin-bottom: 24px;
+  color: var(--surface-tertiary);
+  opacity: 0.5;
+}
+
+.empty-state h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.empty-state p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 400px;
+  margin: 0 auto;
+}
