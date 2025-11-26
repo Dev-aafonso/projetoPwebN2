@@ -1,42 +1,58 @@
+/* ===== RESET E CONFIGURAÇÕES GLOBAIS ===== */
+
+/* Reset básico para remover margens e paddings padrão */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Inclui padding e border no cálculo do tamanho */
 }
 
+/* ===== VARIÁVEIS CSS (CUSTOM PROPERTIES) ===== */
 :root {
+  /* Cores principais */
   --primary: #7063f0;
   --primary-hover: #5a4bec;
+  --danger: #f06368;
+  --danger-hover: #e04b50;
+  --white: #ffffff;
+
+  /* Cores de fundo */
   --background: #ffffff;
   --surface: #ffffff;
   --surface-secondary: #f8f9fa;
   --surface-tertiary: #e9ecef;
+
+  /* Cores de texto */
   --text-primary: #1a1a1a;
   --text-secondary: #6c757d;
   --text-tertiary: #adb5bd;
+
+  /* Cores de borda */
   --border: #dee2e6;
   --border-light: #e9ecef;
-  --danger: #f06368;
-  --danger-hover: #e04b50;
-  --white: #ffffff;
-  --maxw: 1200px;
-  --card-radius: 12px;
-  --modal-radius: 8px;
-  --gap: 24px;
-  --page-pad: 24px;
+
+  /* Layout e espaçamento */
+  --maxw: 1200px; /* Largura máxima do container */
+  --card-radius: 12px; /* Border radius para cards */
+  --modal-radius: 8px; /* Border radius para modais */
+  --gap: 24px; /* Espaçamento entre elementos */
+  --page-pad: 24px; /* Padding da página */
 }
 
+/* ===== ESTILOS GLOBAIS DO BODY ===== */
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif; /* Fonte principal */
   background-color: var(--background);
   color: var(--text-primary);
-  line-height: 1.6;
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6; /* Altura da linha para melhor legibilidade */
+  min-height: 100vh; /* Garante que o body ocupe toda a altura da tela */
+  -webkit-font-smoothing: antialiased; /* Suavização de fontes no Webkit */
+  -moz-osx-font-smoothing: grayscale; /* Suavização de fontes no Firefox */
 }
 
-/* Animações */
+/* ===== ANIMAÇÕES ===== */
+
+/* Animação de entrada dos modais */
 @keyframes modalSlideIn {
   from {
     opacity: 0;
@@ -48,7 +64,9 @@ body {
   }
 }
 
-/* Acessibilidade - Foco visível */
+/* ===== ACESSIBILIDADE ===== */
+
+/* Estilo de foco visível para teclado */
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
@@ -57,7 +75,30 @@ textarea:focus-visible,
   outline-offset: 2px;
 }
 
-/* Melhoria de performance para animações */
+/* ===== PERFORMANCE E PREFERÊNCIAS DO USUÁRIO ===== */
+
+/* Otimizações para quando o usuário prefere reduzir movimento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* Remove transformações em hover quando reduzido movimento */
+  .post-card:hover,
+  .btn-create:hover,
+  .btn-edit:hover,
+  .btn-delete:hover,
+  .btn-carregar-mais:hover,
+  .btn-save:hover,
+  .btn-cancel:hover,
+  .btn-confirm-delete:hover {
+    transform: none;
+  }
+}
+
+/* Melhoria de performance para animações quando permitido */
 @media (prefers-reduced-motion: no-preference) {
   .modal {
     animation: modalSlideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -68,25 +109,5 @@ textarea:focus-visible,
   .btn-edit,
   .btn-delete {
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-}
-
-/* Prefers reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-
-  .post-card:hover,
-  .btn-create:hover,
-  .btn-edit:hover,
-  .btn-delete:hover,
-  .btn-carregar-mais:hover,
-  .btn-save:hover,
-  .btn-cancel:hover,
-  .btn-confirm-delete:hover {
-    transform: none;
   }
 }

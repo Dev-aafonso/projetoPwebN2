@@ -1,33 +1,37 @@
+/* ===== CONTAINER PRINCIPAL ===== */
 .container {
-  max-width: var(--maxw);
-  margin: 0 auto;
-  padding: 0 var(--page-pad);
-  width: 100%;
+  max-width: var(--maxw); /* Largura máxima de 1200px */
+  margin: 0 auto; /* Centraliza o container */
+  padding: 0 var(--page-pad); /* Padding lateral */
+  width: 100%; /* Ocupa 100% da largura disponível */
 }
 
+/* ===== HEADER PRINCIPAL ===== */
 .main-header {
   padding: 32px 0;
-  border-bottom: 1px solid var(--border);
-  margin-bottom: 40px;
+  border-bottom: 1px solid var(--border); /* Linha separadora */
+  margin-bottom: 40px; /* Espaço abaixo do header */
 }
 
 .header-top {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
+  justify-content: space-between; /* Logo à esquerda, usuário à direita */
+  flex-wrap: wrap; /* Permite quebra em telas menores */
+  gap: 16px; /* Espaço entre os elementos */
 }
 
+/* ===== LOGO ===== */
 .logo {
   font-size: 24px;
   font-weight: 700;
   color: var(--primary);
   position: relative;
-  padding-left: 12px;
+  padding-left: 12px; /* Espaço para a linha decorativa */
   margin: 0;
 }
 
+/* Linha decorativa ao lado do logo */
 .logo::before {
   content: "";
   position: absolute;
@@ -40,26 +44,27 @@
   border-radius: 2px;
 }
 
+/* ===== MENSAGEM DE BOAS-VINDAS ===== */
 .user-welcome {
   font-size: 16px;
   color: var(--text-secondary);
   font-weight: 600;
   margin: 0;
-  text-align: right;
+  text-align: right; /* Alinha o texto à direita */
 }
 
 .user-welcome strong {
-  color: var(--primary);
+  color: var(--primary); /* Destaque para os nomes */
 }
 
-/* Cabeçalho das Publicações */
+/* ===== CABEÇALHO DA SEÇÃO DE POSTS ===== */
 .posts-section-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Título e botão separados */
   align-items: center;
-  margin-bottom: 32px;
-  flex-wrap: wrap;
-  gap: 16px;
+  margin-bottom: 32px; /* Espaço abaixo do cabeçalho */
+  flex-wrap: wrap; /* Permite quebra em telas menores */
+  gap: 16px; /* Espaço entre título e botão */
 }
 
 .posts-section-header h2 {
@@ -69,36 +74,36 @@
   margin: 0;
 }
 
-/* Conteúdo Principal */
+/* ===== CONTEÚDO PRINCIPAL ===== */
 .main-content {
-  padding-bottom: 60px;
-  min-height: 60vh;
+  padding-bottom: 60px; /* Espaço na parte inferior */
+  min-height: 60vh; /* Altura mínima para conteúdo */
 }
 
-/* Grid de Posts */
+/* ===== GRID DE POSTS ===== */
 .posts-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--gap);
-  margin-bottom: 40px;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas por padrão */
+  gap: var(--gap); /* Espaço entre os cards */
+  margin-bottom: 40px; /* Espaço abaixo do grid */
 }
 
-/* Estado Vazio */
+/* ===== ESTADO VAZIO (QUANDO NÃO HÁ POSTS) ===== */
 .empty-state {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 80px 20px;
+  padding: 80px 20px; /* Espaçamento interno generoso */
   color: var(--text-tertiary);
 }
 
 .empty-state i {
-  font-size: 64px;
+  font-size: 64px; /* Ícone grande */
   margin-bottom: 24px;
   color: var(--surface-tertiary);
-  opacity: 0.5;
+  opacity: 0.5; /* Ícone sutil */
 }
 
 .empty-state h3 {
@@ -111,6 +116,6 @@
 .empty-state p {
   font-size: 16px;
   color: var(--text-secondary);
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 400px; /* Limita a largura do texto */
+  margin: 0 auto; /* Centraliza o parágrafo */
 }
