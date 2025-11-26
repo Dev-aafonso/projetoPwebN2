@@ -62,7 +62,7 @@ textarea:focus-visible,
   .modal {
     animation: modalSlideIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
+
   .post-card,
   .btn-create,
   .btn-edit,
@@ -78,7 +78,7 @@ textarea:focus-visible,
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  
+
   .post-card:hover,
   .btn-create:hover,
   .btn-edit:hover,

@@ -1,6 +1,6 @@
 /* Arquivo Principal - Importa todos os módulos CSS */
-@import url('base.css');
-@import url('layout.css');
-@import url('components.css');
-@import url('modals.css');
-@import url('responsive.css');
+@import url("base.css");
+@import url("layout.css");
+@import url("components.css");
+@import url("modals.css");
+@import url("responsive.css");
