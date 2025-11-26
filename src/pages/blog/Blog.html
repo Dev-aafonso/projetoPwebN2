@@ -3,32 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>S4Blog</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="../../styles/blogStyles/blog.css">
 </head>
 <body>
 
-        <!-- CABEÇALHO -->
+            <!-- CABEÇALHO -->
     <header class="header">
-        <div class="header-content">
+        <div class="header-top">
             <h1 class="logo">S4Blog</h1>
-
+            
             <nav class="menu">
-                <a href="#">Tecnologia</a>
-                <a href="#">React JS</a>
-                <a href="#">HTML & CSS</a>
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">●</span>
+                    Tecnologia
+                </a>
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">●</span>
+                    React JS
+                </a>
+                <a href="#" class="menu-item">
+                    <span class="menu-icon">●</span>
+                    HTML & CSS
+                </a>
             </nav>
+        </div>
 
-            <button class="reset-btn">Reset</button>
+        <div class="back-section">
+            <a href="#" class="back-link">
+                <span class="back-arrow">‹</span>
+                Voltar para o início
+            </a>
         </div>
     </header>
+<main class="main-content">
 
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main class="main-content">
-        <!-- VOLTAR -->
-        <div class="back">
-            <span>&#x2039;</span> Voltar para o início
-        </div>
 
         <!-- IMAGEM CENTRALIZADA -->
         <section class="imagem-container">
@@ -78,28 +87,66 @@
         </div>
     </main>
 
-    <!-- RODAPÉ COM ARTIGOS RELACIONADOS -->
+    <!-- RODAPÉ FINAL -->
     <footer class="footer">
-        <!-- ARTIGOS RELACIONADOS -->
-        <section class="related">
-            <h2>Artigos semelhantes</h2>
+        <div class="footer-content">
+            <!-- ARTIGOS RELACIONADOS -->
+            <section class="related">
+                <h2>Artigos semelhantes</h2>
+                
+                <div class="related-grid">
+                    <!-- Artigo 1 -->
+                    <div class="rel-card">
+                        <div class="rel-img">
+                            <img src="https://via.placeholder.com/300x160/6b5eff/ffffff?text=VR" alt="Realidade virtual" class="imagem-card">
+                        </div>
+                        <div class="rel-content">
+                            <span class="rel-cat">TECHNOLOGIA</span>
+                            <h3 class="rel-title">Realidade virtual: Entendendo a tecnologia</h3>
+                            <div class="rel-meta">16, Pov. – Editado há 12 minutos</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Artigo 2 -->
+                    <div class="rel-card">
+                        <div class="rel-img">
+                            <img src="https://via.placeholder.com/300x160/6b5eff/ffffff?text=Escrita" alt="Insegurança na escrita" class="imagem-card">
+                        </div>
+                        <div class="rel-content">
+                            <span class="rel-cat">TECHNOLOGIA</span>
+                            <h3 class="rel-title">Você fica inseguro(a) na hora de escrever?</h3>
+                            <div class="rel-meta">16, Pov. – Editado há 12 minutos</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Artigo 3 -->
+                    <div class="rel-card">
+                        <div class="rel-img">
+                            <img src="https://via.placeholder.com/300x160/6b5eff/ffffff?text=React+Native" alt="React Native" class="imagem-card">
+                        </div>
+                        <div class="rel-content">
+                            <span class="rel-cat">TECHNOLOGIA</span>
+                            <h3 class="rel-title">React Native Weekend - 21º na minha visão</h3>
+                            <div class="rel-meta">16, Pov. – Editado há 12 minutos</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
+            <!-- INFORMAÇÕES DA MARCA E MENU -->
+            <div class="footer-final">
+                <div class="footer-brand">
+                    <h2>S4Blog</h2>
+                    <p>Tudo o que você precisa para evoluir no front-end.<br>Conteúdo atualizado, direto e feito por quem vive código.</p>
+                </div>
 
-        <!-- RODAPÉ FINAL -->
-        <div class="footer-final">
-            <div class="footer-left">
-                <h2>S4Blog</h2>
-                <p>Tudo o que você precisa para evoluir no front-end. Conteúdo atualizado e direto ao ponto.</p>
+                <div class="footer-menu">
+                    <h3>Menu</h3>
+                    <a href="#">Tecnologia</a>
+                    <a href="#">React JS</a>
+                    <a href="#">HTML & CSS</a>
+                </div>
             </div>
-
-            <div class="footer-right">
-                <h3>Menu</h3>
-                <a href="#">Tecnologia</a>
-                <a href="#">React JS</a>
-                <a href="#">HTML & CSS</a>
-            </div>
-
-            <button class="scroll-top">↑</button>
         </div>
     </footer>
 
