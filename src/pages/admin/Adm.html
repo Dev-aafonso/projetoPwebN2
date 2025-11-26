@@ -20,9 +20,7 @@
       <header class="main-header">
         <div class="header-top">
           <h1 class="logo">S4Blog</h1>
-          <div class="user-welcome">
-            Bem-vindos, <strong>Afonso Filho & Luiz Thomas</strong>
-          </div>
+          <div class="user-welcome">Bem-vindos, <strong>Afonso Filho & Luiz Thomas</strong></div>
         </div>
       </header>
 
@@ -32,26 +30,25 @@
         <div class="posts-section-header">
           <h2>Minhas publicações</h2>
           <button id="btnAdd" class="btn-create">
-            <i class="fas fa-plus"></i> Criar postagem
+            <i class="fas fa-plus"></i> Novo post
           </button>
         </div>
 
         <!-- Lista de Posts -->
         <div class="posts-section">
           <div class="posts-grid" id="listaPosts">
-            <!-- Posts serão carregados via JavaScript -->
+            <!-- Posts carregados via JavaScript -->
           </div>
-
           <div class="empty-state" id="emptyState">
             <i class="fas fa-newspaper"></i>
             <h3>Nenhuma postagem encontrada</h3>
-            <p>Clique em "Criar postagem" para começar.</p>
+            <p>Clique em "Novo post" para começar.</p>
           </div>
         </div>
       </main>
     </div>
 
-    <!-- Modal Criar/Editar Postagem - MODIFICADO -->
+    <!-- Modal Criar/Editar Postagem -->
     <div class="modal-overlay" id="modalOverlay">
       <div class="modal">
         <div class="modal-header">
@@ -61,7 +58,6 @@
             <i class="fas fa-times"></i>
           </button>
         </div>
-
         <form id="formPost" class="modal-form">
           <div class="form-group">
             <label for="autor">Nome do autor</label>
@@ -72,7 +68,6 @@
               required
             />
           </div>
-
           <div class="form-group">
             <label for="titulo">Título</label>
             <input
@@ -82,7 +77,6 @@
               required
             />
           </div>
-
           <div class="form-group">
             <label for="categoria">Categoria</label>
             <input
@@ -92,7 +86,6 @@
               required
             />
           </div>
-
           <div class="form-group">
             <label for="imagem">URL imagem</label>
             <input
@@ -102,7 +95,6 @@
               required
             />
           </div>
-
           <div class="form-group">
             <label for="conteudo">Conteúdo</label>
             <textarea
@@ -112,7 +104,6 @@
               required
             ></textarea>
           </div>
-
           <div class="modal-actions">
             <button type="submit" class="btn-save">
               <i class="fas fa-check"></i> Salvar
@@ -122,7 +113,7 @@
       </div>
     </div>
 
-    <!-- Modal Confirmar Exclusão - MODIFICADO -->
+    <!-- Modal Confirmar Exclusão -->
     <div class="modal-overlay" id="deleteModalOverlay">
       <div class="modal delete-modal">
         <div class="modal-header">
@@ -132,7 +123,6 @@
             <i class="fas fa-times"></i>
           </button>
         </div>
-
         <div class="modal-body">
           <p class="warning-text">
             ao clicar em sim o processo não pode ser desfeito.
@@ -143,17 +133,16 @@
             </h4>
           </div>
         </div>
-
         <div class="modal-actions delete-actions">
-          <button type="button" id="btnCancelarDelete" class="btn-cancel">
-            Cancelar
-          </button>
           <button
             type="button"
             id="btnConfirmarDelete"
             class="btn-confirm-delete"
           >
             Excluir
+          </button>
+          <button type="button" id="btnCancelarDelete" class="btn-cancel">
+            Cancelar
           </button>
         </div>
       </div>

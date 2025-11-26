@@ -4,108 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S4Blog</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../styles/blogStyles/blog.css">
 </head>
 <body>
 
     <!-- CABEÇALHO -->
     <header class="header">
-        <h1 class="logo">S4Blog</h1>
+        <div class="header-content">
+            <h1 class="logo">S4Blog</h1>
 
-        <nav class="menu">
-            <a href="#">Tecnologia</a>
-            <a href="#">React JS</a>
-            <a href="#">HTML & CSS</a>
-        </nav>
+            <nav class="menu">
+                <a href="#">Tecnologia</a>
+                <a href="#">React JS</a>
+                <a href="#">HTML & CSS</a>
+            </nav>
+        </div>
     </header>
 
-    <!-- VOLTAR -->
-    <div class="back">
-        <span>&#x2039;</span> Voltar para o início
-    </div>
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="main-content">
+        <!-- VOLTAR -->
+        <div class="back">
+            <span>&#x2039;</span> Voltar para o início
+        </div>
 
-    <!-- SEÇÃO DA IMAGEM -->
-    <section class="capa-section">
+        <!-- IMAGEM CENTRALIZADA -->
+        <section class="imagem-container">
+            <div class="imagem-centralizada">
+                <!-- COLOQUE SUA IMAGEM AQUI -->
+                <img src="image.png" alt="Imagem do artigo" class="imagem-personalizada">
+            </div>
+        </section>
 
-        <!-- AQUI VOCÊ COLOCA O LINK DA IMAGEM -->
-        <img src="image.png" class="capa" alt="Imagem da matéria">
-
-        <!-- CARD BRANCO -->
-        <div class="card">
+        <!-- CONTEÚDO DO ARTIGO -->
+        <section class="conteudo-principal">
             <span class="tag">TECNOLOGIA</span>
             <h2>Como o React JS mudou a forma de construir sistemas modernos.</h2>
-
-            <div class="info">
+            
+            <div class="info-article">
                 <span>👤 José Silva</span>
                 <span>📅 21 dez. 2025</span>
             </div>
+
+            <div class="conteudo-texto">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur elit id sapien porta mollis. Maecenas nisi a nulla sit amet est ultrices volutpat. Suspendisse potenti. Nulla sit amet dui turpis. Sed fermentum tincidunt orci a laoreet. Duis egestas ligula vitae consequat aliquam.</p>
+
+                <h3>Por que usar React?</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur elit id sapien porta mollis.</p>
+
+                <h3>Sobre o ecossistema</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur elit id sapien porta mollis.</p>
+
+                <h3>Como utilizar a biblioteca</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur elit id sapien porta mollis.</p>
+
+                <ul>
+                    <li>Integração fácil.</li>
+                    <li>Componentização moderna.</li>
+                    <li>Alto desempenho.</li>
+                    <li>Comunidade gigante.</li>
+                </ul>
+
+                <h3>Conclusão</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur elit id sapien porta mollis.</p>
+            </div>
+        </section>
+
+        <!-- COMPARTILHAMENTO -->
+        <div class="share">
+            <strong>Compartilhe esse conteúdo</strong>
         </div>
-    </section>
+    </main>
 
-    <!-- CONTEÚDO DO ARTIGO -->
-    <section class="content">
+    <!-- RODAPÉ COM ARTIGOS RELACIONADOS -->
+    <footer class="footer">
+        <!-- ARTIGOS RELACIONADOS -->
+        <section class="related">
+            <h2>Artigos semelhantes</h2>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc efficitur elit id sapien porta mollis. Maecenas a nulla sit amet est ultrices volutpat.</p>
 
-        <h2>Por que usar React?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sit amet dui turpis. Sed fermentum tincidunt orci a laoreet.</p>
+        <!-- RODAPÉ FINAL -->
+        <div class="footer-final">
+            <div class="footer-left">
+                <h2>S4Blog</h2>
+                <p>Tudo o que você precisa para evoluir no front-end. Conteúdo atualizado e direto ao ponto.</p>
+            </div>
 
-        <h2>Sobre o ecossistema</h2>
-        <p>Donec vitae interdum nisl. Fusce porttitor lorem ut est cursus, et sollicitudin sapien pretium.</p>
+            <div class="footer-right">
+                <h3>Menu</h3>
+                <a href="#">Tecnologia</a>
+                <a href="#">React JS</a>
+                <a href="#">HTML & CSS</a>
+            </div>
 
-        <h2>Como utilizar a biblioteca</h2>
-        <p>Donec vitae interdum nisl. Mauris placerat eros massa, quis semper mauris faucibus et.</p>
-
-        <ul>
-            <li>Integração fácil.</li>
-            <li>Componentização moderna.</li>
-            <li>Alto desempenho.</li>
-            <li>Comunidade gigante.</li>
-        </ul>
-
-        <h2>Conclusão</h2>
-        <p>React revolucionou o desenvolvimento web, trazendo performance e facilidade para manutenção de sistemas.</p>
-
-    </section>
-
-    <!-- SEÇÃO DE COMPARTILHAMENTO -->
-    <div class="share">
-        <strong>Compartilhe esse conteúdo</strong>
-    </div>
-
-    <!-- ARTIGOS RELACIONADOS -->
-    <section class="related">
-        <h2>Artigos semelhantes</h2>
-
-        <div class="article">
-            <div class="category">TECNOLOGIA</div>
-            <div class="title">Realidade virtual: Entendendo a tecnologia</div>
-            <div class="meta">IS, Fixe — Editado em 12 maratos</div>
+            <button class="scroll-top">↑</button>
         </div>
-
-        <div class="article">
-            <div class="category">FAMÍLIA DE VERGÜÊNCIA</div>
-            <div class="title">Relação de energia</div>
-            <div class="meta">Efetividade energética</div>
-        </div>
-
-        <div class="article">
-            <div class="category">TECNOLOGIA</div>
-            <div class="title">Você fica inseguro(a) na hora de escrever?</div>
-            <div class="meta">IS, Fixe — Editado em 12 maratos</div>
-        </div>
-
-        <div class="article">
-            <div class="category">TECNOLOGIA</div>
-            <div class="title">Road: Native Weekend – 2T na minha visão</div>
-            <div class="meta">IS, Fixe — Editado em 12 maratos</div>
-        </div>
-    </section>
-
-    <!-- RODAPÉ -->
-    <footer>
-        <div class="footer-brand">S4Blog</div>
-        <div class="footer-menu">Menu</div>
     </footer>
 
 </body>
