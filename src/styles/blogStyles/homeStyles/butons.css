@@ -1,0 +1,74 @@
+/* ===== BOTÕES ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  font-family: inherit;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: var(--gradient-hero);
+  color: var(--color-bg-dark);
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(255, 201, 52, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #ffe234 0%, #ffda34 94.83%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 201, 52, 0.4);
+}
+
+.btn-outline {
+  border: 2px solid var(--color-white);
+  color: var(--color-white);
+  background: transparent;
+  font-weight: 600;
+}
+
+.btn-outline:hover {
+  background: var(--color-white);
+  color: var(--color-bg-dark);
+}
+
+/* ===== BOTÃO CARREGAR MAIS ===== */
+.btn-carregar-mais {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: 12px 32px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 40px auto 0;
+  width: fit-content;
+  font-family: inherit;
+}
+
+.btn-carregar-mais:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(112, 99, 240, 0.3);
+}
+
+.load-more-wrap {
+  text-align: center;
+  margin-top: 40px;
+  grid-column: 1 / -1;
+}

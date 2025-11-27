@@ -1,0 +1,66 @@
+:root {
+  /* Cores Principais e de Destaque */
+  --color-primary: #7063f0;
+  --color-accent: #ffc934;
+  --color-accent-light: #ffc9344d;
+  --color-white: #ffffff;
+  --color-dark: #333333;
+  --color-muted: #a3a3a3;
+  --color-bg-dark: #0e0b2b;
+  --color-success: #10b981;
+  --color-danger: #ef4444;
+  --color-warning: #f59e0b;
+
+  /* Gradientes */
+  --gradient-hero: linear-gradient(135deg, #b3a04c, #ffda34);
+  --gradient-card: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+
+  /* Cores de borda */
+  --border-light: #e5e7eb;
+  --border-medium: #d1d5db;
+
+  /* Layout */
+  --max-width: 1280px;
+  --radius: 8px;
+  --gap: 24px;
+  --fw-regular: 400;
+  --fw-medium: 600;
+  --fw-bold: 700;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== ESTILOS GLOBAIS DO BODY ===== */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-dark);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
