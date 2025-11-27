@@ -397,3 +397,108 @@ async function adicionarPostsExemplo() {
     console.error("Erro ao adicionar posts exemplo:", error);
   }
 }
+
+
+// ===== FUNÇÃO PARA SINCRONIZAR COM O BLOG =====
+
+// Formata os dados do post no padrão do blog
+function formatarDadosParaBlog(postData) {
+    const agora = new Date();
+    
+    // Formatar data no padrão do blog "16, Fev"
+    const dia = agora.getDate();
+    const mes = agora.toLocaleDateString('pt-BR', { month: 'short' }).replace('.', '');
+    const dataBlog = `${dia}, ${mes}`;
+    
+    // Horário relativo (pode ser dinâmico ou fixo)
+    const minutosAtras = Math.floor(Math.random() * 30) + 1; // 1-30 minutos
+    const horarioBlog = `Editado há ${minutosAtras} minutos`;
+    
+    return {
+        ...postData,
+        // Campos específicos do blog
+        dataBlog: dataBlog,
+        horarioBlog: horarioBlog,
+        // Garantir que a categoria esteja em maiúsculo como no blog
+        categoria: postData.categoria.toUpperCase()
+    };
+}
+
+// ===== MODIFICAÇÃO NA FUNÇÃO salvarPost =====
+
+async function salvarPost(e) {
+    e.preventDefault();
+
+    // Coleta os dados do formulário
+    const postData = {
+        autor: autorInput.value.trim(),
+        titulo: tituloInput.value.trim(),
+        categoria: categoriaInput.value.trim(),
+        imagem: imagemInput.value.trim(),
+        conteudo: conteudoInput.value.trim(),
+        data: new Date().toISOString(),
+    };
+
+    try {
+        // Formata os dados para o padrão do blog
+        const dadosFormatados = formatarDadosParaBlog(postData);
+
+        if (editId) {
+            // MODO EDIÇÃO: Atualiza post existente
+            const postExistente = allPosts.find((p) => p.id === editId);
+            dadosFormatados.data = postExistente.data; // Mantém a data original
+
+            await fetch(`${API_URL}/${editId}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(dadosFormatados),
+            });
+        } else {
+            // MODO CRIAÇÃO: Cria novo post
+            await fetch(API_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(dadosFormatados),
+            });
+        }
+
+        fecharModalCriar();
+        listarTodosPosts();
+        
+        // Feedback visual
+        mostrarNotificacao('Post salvo e sincronizado com o blog!');
+        
+    } catch (error) {
+        console.error("Erro ao salvar post:", error);
+        alert("Erro ao salvar postagem.");
+    }
+}
+
+// Função para mostrar notificação
+function mostrarNotificacao(mensagem) {
+    // Cria uma notificação temporária
+    const notification = document.createElement('div');
+    notification.className = 'notification-sync';
+    notification.textContent = mensagem;
+    notification.style.cssText = `
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: var(--primary);
+        color: white;
+        padding: 12px 20px;
+        border-radius: 6px;
+        z-index: 10000;
+        animation: slideIn 0.3s ease;
+    `;
+    
+    document.body.appendChild(notification);
+    
+    setTimeout(() => {
+        notification.remove();
+    }, 3000);
+}

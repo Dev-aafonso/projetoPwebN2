@@ -107,6 +107,50 @@
       "imagem": "https://cursoseducaweb.com.br/images/blog/informatica-basica-2.JPG",
       "conteudo": "A tecnologia é o ponto principal do mercado, da sociedade e da cultura na era digital. Dessa forma, sem o conhecimento fundamental dessa área, torna-se difícil acompanhar as mudanças do mundo e participar dos setores profissionais.\n\nPor isso, é necessário aprender os conceitos e práticas essenciais da informática. Assim, neste artigo você descobrirá um guia completo sobre o assunto e conhecerá um curso online gratuito de excelência para se formar. Acompanhe a leitura!",
       "data": "2025-11-26T13:47:57.060Z"
+    },
+    {
+      "id": "9f96",
+      "autor": "Afonso Filho",
+      "titulo": "O que é software de desenvolvimento: tudo o que você precisa saber",
+      "categoria": "DESEVOLVIMENTO DE SOFTWARE",
+      "imagem": "https://informatecdigital.com/wp-content/uploads/2025/04/que-es-el-software-de-desarrollo-8.jpg.webp",
+      "conteudo": "Informatec Digital » desenvolvimento » O que é software de desenvolvimento: tudo o que você precisa saber\n\nO software de desenvolvimento abrange ferramentas e plataformas essenciais para a criação de aplicativos e sistemas de computador.\nExistem vários tipos, como IDEs, compiladores, frameworks e ferramentas de controle de versão, adaptados a diferentes estágios de desenvolvimento.\nA evolução tecnológica, a automação e a inteligência artificial estão tendo um impacto profundo no setor.",
+      "data": "2025-11-26T21:19:59.213Z",
+      "dataBlog": "26, nov",
+      "horarioBlog": "Editado há 1 minutos"
+    },
+    {
+      "id": "833c",
+      "autor": "Luiz Thomas",
+      "titulo": "Desenvolvimento de Softwares: O que é, Como Funciona e Dicas",
+      "categoria": "DESEVOLVIMENTO DE SOFTWARE",
+      "imagem": "https://fia.com.br/wp-content/uploads/2022/06/desenvolvimento-softwares-o-que-e-como-funciona-dicas.jpg",
+      "conteudo": "Na Era da Informação, o desenvolvimento de softwares é uma das atividades mais valorizadas no mercado de trabalho.\n\nAfinal, a internet e a computação assumem um protagonismo cada vez maior em nosso cotidiano.\n\nA cada dia que passa, novas soluções tecnológicas surgem para mudar a maneira como fazíamos determinada tarefa.\n\nÉ uma transformação digital e cultural, pois incita uma nova mentalidade na população em geral, mas principalmente nos empreendedores.\n\nAqueles que não entenderem a importância do software em seu negócio – seja qual for sua área de atuação – tendem a ficar para trás.",
+      "data": "2025-11-26T21:20:30.137Z",
+      "dataBlog": "26, nov",
+      "horarioBlog": "Editado há 14 minutos"
+    },
+    {
+      "autor": "Afonso Filho",
+      "titulo": "Processo de desenvolvimento de software: veja os principais modelos",
+      "categoria": "DSV. SOFT.",
+      "imagem": "https://informatecdigital.com/wp-content/uploads/2025/04/que-es-el-software-de-desarrollo-3.jpg",
+      "conteudo": "Entende-se por processo de desenvolvimento de software um conjunto de procedimentos estratégicos e organizados com o propósito de arquitetar, desenvolver e testar o software. Além de prestar manutenção para garantir seu bom funcionamento, claro.\n\nUm software bem desenvolvido oferece muitos benefícios para os negócios. É um produto capaz de otimizar várias áreas e serviços de todos os tipos de segmento, além de ajudar na redução de custos. No entanto, para que seja entregue a melhor solução possível, o processo de desenvolvimento de software deve seguir as melhores práticas da área.\n\nPensando em ajudar você a entender melhor como funciona esse processo, elaboramos este conteúdo. Veja a importância disso e descubra os principais modelos!",
+      "data": "2025-11-26T21:21:15.349Z",
+      "dataBlog": "26, nov",
+      "horarioBlog": "Editado há 6 minutos",
+      "id": "139f"
+    },
+    {
+      "autor": "Luiz Thomas",
+      "titulo": "Entenda o que é desenvolvimento de software e como funciona o processo",
+      "categoria": "DSV. SOFT.",
+      "imagem": "https://blog.runrun.it/wp-content/uploads/2023/12/142695-Clusterizacao-DEV-Desenvolvimento-de-software-blog-2.png",
+      "conteudo": "Apps, software para computadores, aplicações acessíveis pela internet, plataformas bancárias online, serviços de streaming: qual é o elo comum entre todos esses sistemas tecnológicos? Eles foram concebidos por meio de um método, um esquema, uma sistemática que parte do trabalho de desenvolvimento de software.\n\nEste campo se preocupa em compreender como criar plataformas digitais de forma eficiente, considerando as necessidades dos usuários. A engenharia de software, como área de conhecimento, dedica-se igualmente ao exame minucioso dessas questões, empregando uma abordagem rigorosa característica da engenharia.\n\nExplore esse artigo para desvendar como funciona esse processo de desenvolvimento de software e boas práticas para otimizar esse serviço tão essencial na era da informação digital.",
+      "data": "2025-11-26T21:23:16.609Z",
+      "dataBlog": "26, nov",
+      "horarioBlog": "Editado há 1 minutos",
+      "id": "916d"
     }
   ]
 }

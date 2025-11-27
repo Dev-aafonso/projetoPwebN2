@@ -1,211 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Home</title>
-  <link rel="stylesheet" href="../../styles/blogStyles/home.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>S4Blog - Tech Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../styles/blogStyles/homeStyles/home.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <a href="#" class="logo"><span>S4</span>Blog</a>
+        </div>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <a href="#" class="logo">S4Blog</a>
-      </div>
-
-      <nav class="main-nav" aria-label="menu principal">
-        <ul>
-          <li><a href="#">Tecnologia</a></li>
-          <li><a href="#">Programação</a></li>
-          <li><a href="#">IA e Dados</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-actions">
-        <a href="#" class="btn btn-ghost">Entrar</a>
-        <a href="#" class="btn btn-primary">Criar Conta</a>
-      </div>
-    </div>
-  </header>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <span class="hero-tag">DESTAQUE</span>
-      <h1>O blog para quem vive e respira código.</h1>
-      <p class="hero-sub">Textos e guias para devs, sobre ferramentos, carreiras, inteligência artificial e dados.</p>
-
-      <div class="hero-ctas">
-        <a href="#" class="btn btn-primary large">Explorar agora</a>
-        <a href="#" class="btn btn-outline large">Assinar Newsletter</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MAIN -->
-  <main class="container main">
-    <div class="main-grid">
-
-      <!-- COLUNA PRINCIPAL -->
-      <section class="col-left">
-        <h2 class="section-title">Em destaque</h2>
-
-        <article class="featured-card">
-          <div class="featured-media" role="img" aria-label="imagem destaque">
-            <!-- substitua pela <img src="..."> quando tiver imagens -->
-          </div>
-
-          <div class="featured-body">
-            <h3 class="featured-title">O poder da inteligência artificial na análise de dados em grandes bases</h3>
-            <div class="featured-meta">
-              <span>👁️ 2.4k</span>
-              <span>💬 12</span>
-              <span>⏱️ 8 min</span>
-            </div>
-            <p class="featured-excerpt">Como a IA está revolucionando o processamento e interpretação de dados complexos e permitindo decisões mais rápidas e precisas.</p>
-          </div>
-        </article>
-
-        <!-- ARTIGOS -->
-        <section class="articles">
-          <h2 class="section-title sr-only">Artigos</h2>
-
-          <div class="articles-grid">
-            <!-- Repeatable article card -->
-            <article class="card">
-              <div class="card-media"></div>
-              <div class="card-body">
-                <h4>Realidade virtual: o próximo passo?</h4>
-                <p>Uma análise sobre o avanço tecnológico e suas aplicações.</p>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-media"></div>
-              <div class="card-body">
-                <h4>Novas tendências de design web</h4>
-                <p>O que esperar da nova geração de interfaces digitais.</p>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-media"></div>
-              <div class="card-body">
-                <h4>Tipos de dados na programação</h4>
-                <p>Entenda como funcionam variáveis e estruturas.</p>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-media"></div>
-              <div class="card-body">
-                <h4>Drones e automação inteligente</h4>
-                <p>Como a tecnologia vem modificando o mercado aéreo.</p>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-media"></div>
-              <div class="card-body">
-                <h4>Trabalho remoto para desenvolvedores</h4>
-                <p>As vantagens e desafios desse novo formato.</p>
-              </div>
-            </article>
-
-            <article class="card">
-              <div class="card-media"></div>
-              <div class="card-body">
-                <h4>Robótica avançada</h4>
-                <p>Máquinas cada vez mais autônomas e eficientes.</p>
-              </div>
-            </article>
-          </div>
-
-          <div class="load-more-wrap">
-            <a href="#" class="btn btn-outline">Carregar mais</a>
-          </div>
-        </section>
-      </section>
-
-      <!-- SIDEBAR -->
-      <aside class="col-right" aria-label="mais populares">
-        <h3 class="sidebar-title">Mais populares</h3>
-
-        <ul class="popular-list">
-          <li class="popular-item">
-            <a href="#" class="popular-link">
-              <div class="thumb"></div>
-              <div class="popular-meta">
-                <span class="popular-title">Frameworks 2025</span>
-                <small class="popular-stats">🔥 4.8k</small>
-              </div>
-            </a>
-          </li>
-
-          <li class="popular-item">
-            <a href="#" class="popular-link">
-              <div class="thumb"></div>
-              <div class="popular-meta">
-                <span class="popular-title">Como iniciar em Python</span>
-                <small class="popular-stats">🔥 3.1k</small>
-              </div>
-            </a>
-          </li>
-
-          <li class="popular-item">
-            <a href="#" class="popular-link">
-              <div class="thumb"></div>
-              <div class="popular-meta">
-                <span class="popular-title">Mac vs Windows para Devs</span>
-                <small class="popular-stats">🔥 2.9k</small>
-              </div>
-            </a>
-          </li>
-
-          <li class="popular-item">
-            <a href="#" class="popular-link">
-              <div class="thumb"></div>
-              <div class="popular-meta">
-                <span class="popular-title">Será o fim dos programadores?</span>
-                <small class="popular-stats">🔥 2.6k</small>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </aside>
-
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="footer-left">
-        <h4 class="brand-footer">S4Blog</h4>
-        <p>Conteúdo atualizado sobre tecnologia, programação e inovação.</p>
-      </div>
-
-      <div class="footer-links">
-        <nav>
-          <a href="#">Início</a>
-          <a href="#">Artigos</a>
-          <a href="#">Categorias</a>
-          <a href="#">Contato</a>
+        <nav class="main-nav" aria-label="menu principal">
+          <ul>
+            <li><a href="#tecnologia">📁 Tecnologia</a></li>
+            <li><a href="#react">⚛️ React JS</a></li>
+            <li><a href="#html-css">💻 HTML & CSS</a></li>
+          </ul>
         </nav>
       </div>
+    </header>
 
-      <div class="footer-copy">
-        © <span id="year"></span> S4Blog — Todos os direitos reservados
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-code-pattern"></div>
+
+      <div class="container hero-inner">
+        <span class="hero-tag">⚡ TECH BLOG</span>
+        <h1>O blog para quem vive e respira código.</h1>
+        <p class="hero-sub">
+          Tudo que você precisa para evoluir no front-end. Conteúdo atualizado,
+          direto e feito por quem vive código.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#" class="btn btn-primary">Conhecer mais</a>
+          <a href="#artigos" class="btn btn-outline">Explorar artigos</a>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
 
-  <script>
-    // atualiza ano do rodapé automaticamente
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</body>
+    <!-- MAIN -->
+    <main class="container main">
+      <div class="main-grid">
+        <!-- COLUNA PRINCIPAL -->
+        <section class="col-left">
+          <!-- TÍTULO PRINCIPAL "TECH BLOG" -->
+          <div class="main-title-section">
+            <h1 class="main-title">TECH BLOG</h1>
+          </div>
+
+          <!-- SEÇÃO "EM DESTAQUE" -->
+          <section class="featured-section">
+            <h2 class="featured-title">Em destaque</h2>
+            
+            <!-- FEATURED CARD (será preenchido pelo JS) -->
+            <article class="featured-card">
+              <a href="#" class="featured-link">
+                <div class="featured-media">
+                  <img src="" alt="" />
+                </div>
+                <div class="featured-body">
+                  <span class="featured-category"></span>
+                  <h3 class="featured-title"></h3>
+                  <div class="featured-meta"></div>
+                </div>
+              </a>
+            </article>
+          </section>
+
+          <!-- ARTIGOS -->
+          <section class="articles" id="artigos">
+            <div class="articles-header">
+              <h2>Artigos</h2>
+              <span class="articles-count"></span>
+            </div>
+
+            <!-- ARTICLES GRID (será preenchido pelo JS) -->
+            <div class="articles-grid">
+              <!-- Os cards serão gerados dinamicamente pelo JavaScript -->
+            </div>
+
+            <!-- LOAD MORE BUTTON WRAPPER -->
+            <div class="load-more-wrap">
+              <!-- Botão será criado dinamicamente pelo JS quando necessário -->
+            </div>
+          </section>
+        </section>
+
+        <!-- SIDEBAR -->
+        <aside class="col-right" aria-label="Mais populares e pesquisa">
+          <h3 class="sidebar-title">Mais populares</h3>
+
+          <!-- POPULAR LIST (será preenchido pelo JS) -->
+          <ul class="popular-list">
+            <!-- Os itens populares serão gerados dinamicamente pelo JavaScript -->
+          </ul>
+
+          <div class="search-form-wrap">
+            <form class="search-form" action="#" method="get">
+              <input
+                type="search"
+                placeholder="Pesquisar por artigo ou tema..."
+                name="q"
+                aria-label="Pesquisar"
+              />
+              <button type="submit" aria-label="Buscar">🔍</button>
+            </form>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <h4 class="brand-footer">S<span class="logo-number">4</span>Blog</h4>
+          <p>
+            Tudo o que você precisa para evoluir no front-end. Conteúdo
+            atualizado, direto e feito por quem vive código.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h5 class="footer-menu-title">Menu</h5>
+          <nav class="footer-nav">
+            <a href="#tecnologia">📁 Tecnologia</a>
+            <a href="#react">⚛️ React JS</a>
+            <a href="#html-css">💻 HTML & CSS</a>
+          </nav>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p class="footer-copy">© S4Blog — Todos os direitos reservados</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../scripts/jsBLOG/blogScript.js"></script>
+  </body>
 </html>
