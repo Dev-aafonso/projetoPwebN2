@@ -21,12 +21,27 @@
         </div>
 
         <nav class="main-nav" aria-label="menu principal">
-          <ul>
-            <li><a href="#tecnologia">📁 Tecnologia</a></li>
-            <li><a href="#react">⚛️ React JS</a></li>
-            <li><a href="#html-css">💻 HTML & CSS</a></li>
-          </ul>
-        </nav>
+  <ul>
+    <li>
+      <a href="#tecnologia">
+        <img src="lampada.png" alt="" class="nav-icon">
+        Tecnologia
+      </a>
+    </li>
+    <li>
+      <a href="#react">
+        <img src="arquivo-js.png" alt="" class="nav-icon">
+        React JS
+      </a>
+    </li>
+    <li>
+      <a href="#html-css">
+        <img src="html.png" alt="" class="nav-icon">
+        HTML & CSS
+      </a>
+    </li>
+  </ul>
+</nav>
       </div>
     </header>
 
@@ -44,7 +59,7 @@
         </p>
 
         <div class="hero-ctas">
-          <a href="#" class="btn btn-primary">Conhecer mais</a>
+          <a href="../blog/Blog.html" class="btn btn-primary">Conhecer mais</a>
           <a href="#artigos" class="btn btn-outline">Explorar artigos</a>
         </div>
       </div>
@@ -123,31 +138,48 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="container footer-inner">
+    <footer class="footer">
+    <div class="footer-container">
+
+        <!-- ESQUERDA -->
         <div class="footer-left">
-          <h4 class="brand-footer">S<span class="logo-number">4</span>Blog</h4>
-          <p>
-            Tudo o que você precisa para evoluir no front-end. Conteúdo
-            atualizado, direto e feito por quem vive código.
-          </p>
+            <h2>S4Blog</h2>
+            <p>
+                Tudo o que você precisa para evoluir no front-end.
+                Conteúdo atualizado, direto e feito por quem vive código.
+            </p>
         </div>
 
-        <div class="footer-links">
-          <h5 class="footer-menu-title">Menu</h5>
-          <nav class="footer-nav">
-            <a href="#tecnologia">📁 Tecnologia</a>
-            <a href="#react">⚛️ React JS</a>
-            <a href="#html-css">💻 HTML & CSS</a>
-          </nav>
+        <!-- CENTRO -->
+        <div class="footer-center">
+            <h3>Menu</h3>
+
+            <a href="#">
+                <img src="lampada.png" alt="">
+                Tecnologia
+            </a>
+
+            <a href="#">
+                <img src="arquivo-js.png" alt="">
+                React JS
+            </a>
+
+            <a href="#">
+                <img src="html.png" alt="">
+                HTML & CSS
+            </a>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <p class="footer-copy">© S4Blog — Todos os direitos reservados</p>
+
+        <!-- DIREITA – SETA PARA CIMA -->
+        <div class="footer-right">
+            <a href="#topo">
+                <img src="../blog/chevron.png" alt="Voltar ao topo" class="top-arrow">
+            </a>
         </div>
-      </div>
-    </footer>
+
+    </div>
+</footer>
+
 
     <script src="../../scripts/jsBLOG/homeScript.js"></script>
   </body>

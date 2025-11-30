@@ -11,26 +11,34 @@
             <!-- CABEÇALHO -->
     <header class="header">
         <div class="header-top">
-            <h1 class="logo">S4Blog</h1>
+            <h1 class="logo"><span>S4</span>Blog</h1>
             
-            <nav class="menu">
-                <a href="#" class="menu-item">
-                    <span class="menu-icon">●</span>
-                    Tecnologia
-                </a>
-                <a href="#" class="menu-item">
-                    <span class="menu-icon">●</span>
-                    React JS
-                </a>
-                <a href="#" class="menu-item">
-                    <span class="menu-icon">●</span>
-                    HTML & CSS
-                </a>
-            </nav>
+            <nav class="main-nav" aria-label="menu principal">
+  <ul class="menu">
+    <li>
+        <a href="#tecnologia" class="menu-item">
+            <img src="lampada.png" alt="Tecnologia" class="menu-icon">
+            Tecnologia
+        </a>
+    </li>
+    <li>
+        <a href="#react" class="menu-item">
+            <img src="arquivo-js.png" alt="React JS" class="menu-icon">
+            React JS
+        </a>
+    </li>
+    <li>
+        <a href="#html-css" class="menu-item">
+            <img src="html.png" alt="HTML & CSS" class="menu-icon">
+            HTML & CSS
+        </a>
+    </li>
+</ul>
+</nav>
         </div>
 
         <div class="back-section">
-            <a href="#" class="back-link">
+            <a href="../blog/Home.html" class="back-link">
                 <span class="back-arrow">‹</span>
                 Voltar para o início
             </a>
@@ -135,19 +143,48 @@
 
             <!-- INFORMAÇÕES DA MARCA E MENU -->
             <div class="footer-final">
-                <div class="footer-brand">
-                    <h2>S4Blog</h2>
-                    <p>Tudo o que você precisa para evoluir no front-end.<br>Conteúdo atualizado, direto e feito por quem vive código.</p>
-                </div>
+    <footer class="footer">
+    <div class="footer-container">
 
-                <div class="footer-menu">
-                    <h3>Menu</h3>
-                    <a href="#">Tecnologia</a>
-                    <a href="#">React JS</a>
-                    <a href="#">HTML & CSS</a>
-                </div>
-            </div>
+        <!-- ESQUERDA -->
+        <div class="footer-left">
+            <h2>S4Blog</h2>
+            <p>
+                Tudo o que você precisa para evoluir no front-end.
+                Conteúdo atualizado, direto e feito por quem vive código.
+            </p>
         </div>
+
+        <!-- CENTRO -->
+        <div class="footer-center">
+            <h3>Menu</h3>
+
+            <a href="#">
+                <img src="lampada.png" alt="">
+                Tecnologia
+            </a>
+
+            <a href="#">
+                <img src="arquivo-js.png" alt="">
+                React JS
+            </a>
+
+            <a href="#">
+                <img src="html.png" alt="">
+                HTML & CSS
+            </a>
+        </div>
+
+        <!-- DIREITA – SETA PARA CIMA -->
+        <div class="footer-right">
+            <a href="#topo">
+                <img src="chevron.png" alt="Voltar ao topo" class="top-arrow">
+            </a>
+        </div>
+
+    </div>
+</footer>
+
     </footer>
 
 </body>
