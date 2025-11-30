@@ -3,41 +3,41 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 28px;
-  border-radius: 6px;
+  padding: 16px 32px;
+  border-radius: 8px;
   font-weight: 700;
   cursor: pointer;
   text-decoration: none;
   border: none;
   font-family: inherit;
-  font-size: 15px;
+  font-size: 16px;
   transition: all 0.2s ease;
-  gap: 8px;
+  gap: 10px;
 }
 
 .btn-primary {
-  background: var(--gradient-hero);
+  background: var(--color-accent);
   color: var(--color-bg-dark);
   font-weight: 700;
   box-shadow: 0 4px 12px rgba(255, 201, 52, 0.3);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(90deg, #ffe234 0%, #ffda34 94.83%);
+  background: var(--color-accent);
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(255, 201, 52, 0.4);
 }
 
 .btn-outline {
-  border: 2px solid var(--color-white);
   color: var(--color-white);
-  background: transparent;
-  font-weight: 600;
+  background-color: var(--color-primary);
+  box-shadow: 0 4px 12px var(--primary-hover);
+  font-weight: 700;
 }
 
 .btn-outline:hover {
-  background: var(--color-white);
-  color: var(--color-bg-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px var(--primary-hover);
 }
 
 /* ===== BOTÃO CARREGAR MAIS ===== */
@@ -45,16 +45,16 @@
   background: transparent;
   color: var(--color-primary);
   border: 2px solid var(--color-primary);
-  padding: 12px 32px;
-  border-radius: 6px;
+  padding: 14px 36px;
+  border-radius: 8px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 15px;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
   margin: 40px auto 0;
   width: fit-content;
   font-family: inherit;

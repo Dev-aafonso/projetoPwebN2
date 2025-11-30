@@ -1,6 +1,7 @@
 :root {
   /* Cores Principais e de Destaque */
   --color-primary: #7063f0;
+  --primary-hover: #5a4bec;
   --color-accent: #ffc934;
   --color-accent-light: #ffc9344d;
   --color-white: #ffffff;

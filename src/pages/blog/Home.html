@@ -13,54 +13,64 @@
     <link rel="stylesheet" href="../../styles/blogStyles/homeStyles/home.css" />
   </head>
   <body>
-    <!-- HEADER -->
-    <header class="site-header">
-      <div class="container header-inner">
-        <div class="brand">
-          <a href="#" class="logo"><span>S4</span>Blog</a>
-        </div>
-
-        <nav class="main-nav" aria-label="menu principal">
-  <ul>
-    <li>
-      <a href="#tecnologia">
-        <img src="lampada.png" alt="" class="nav-icon">
-        Tecnologia
-      </a>
-    </li>
-    <li>
-      <a href="#react">
-        <img src="arquivo-js.png" alt="" class="nav-icon">
-        React JS
-      </a>
-    </li>
-    <li>
-      <a href="#html-css">
-        <img src="html.png" alt="" class="nav-icon">
-        HTML & CSS
-      </a>
-    </li>
-  </ul>
-</nav>
+    <!-- SEÇÃO ÚNICA HEADER + HERO -->
+    <section class="hero-section">
+      <!-- IMAGEM DE BACKGROUND ÚNICA PARA HEADER E HERO -->
+      <div class="hero-bg-image">
+        <img src="Frame 36.png" alt="Background matemático" />
       </div>
-    </header>
 
-    <!-- HERO -->
-    <section class="hero">
       <div class="hero-bg-gradient"></div>
       <div class="hero-code-pattern"></div>
 
-      <div class="container hero-inner">
-        <span class="hero-tag">⚡ TECH BLOG</span>
-        <h1>O blog para quem vive e respira código.</h1>
-        <p class="hero-sub">
-          Tudo que você precisa para evoluir no front-end. Conteúdo atualizado,
-          direto e feito por quem vive código.
-        </p>
+      <!-- HEADER -->
+      <header class="site-header">
+        <div class="container header-inner">
+          <div class="brand">
+            <a href="#" class="logo"><span>S4</span>Blog</a>
+          </div>
 
-        <div class="hero-ctas">
-          <a href="../blog/Blog.html" class="btn btn-primary">Conhecer mais</a>
-          <a href="#artigos" class="btn btn-outline">Explorar artigos</a>
+          <nav class="main-nav" aria-label="menu principal">
+            <ul>
+              <li>
+                <a href="#tecnologia">
+                  <img src="lampada.png" alt="Tecnologia" class="nav-icon" />
+                  Tecnologia
+                </a>
+              </li>
+              <li>
+                <a href="#react">
+                  <img src="arquivo-js.png" alt="React JS" class="nav-icon" />
+                  React JS
+                </a>
+              </li>
+              <li>
+                <a href="#html-css">
+                  <img src="html.png" alt="HTML & CSS" class="nav-icon" />
+                  HTML & CSS
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- CONTEÚDO DO HERO -->
+      <div class="hero-content">
+        <div class="container hero-inner">
+          <span class="hero-tag">⚡ TECH BLOG</span>
+          <h1>O blog para quem vive e respira código.</h1>
+          <p class="hero-sub">
+            Tudo que você precisa para evoluir no front-end. Conteúdo
+            atualizado, direto e feito por quem vive código.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="../blog/Blog.html" class="btn btn-primary"
+              >Conhecer mais</a
+            >
+            <a href="#artigos" class="btn btn-outline">Explorar artigos</a>
+          </div>
         </div>
       </div>
     </section>
@@ -78,7 +88,7 @@
           <!-- SEÇÃO "EM DESTAQUE" -->
           <section class="featured-section">
             <h2 class="featured-title">Em destaque</h2>
-            
+
             <!-- FEATURED CARD (será preenchido pelo JS) -->
             <article class="featured-card">
               <a href="#" class="featured-link">
@@ -139,47 +149,48 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-    <div class="footer-container">
-
+      <div class="footer-container">
         <!-- ESQUERDA -->
         <div class="footer-left">
-            <h2>S4Blog</h2>
-            <p>
-                Tudo o que você precisa para evoluir no front-end.
-                Conteúdo atualizado, direto e feito por quem vive código.
-            </p>
+          <h2>S4Blog</h2>
+          <p>
+            Tudo o que você precisa para evoluir no front-end. Conteúdo
+            atualizado, direto e feito por quem vive código.
+          </p>
         </div>
 
         <!-- CENTRO -->
         <div class="footer-center">
-            <h3>Menu</h3>
+          <h3>Menu</h3>
 
-            <a href="#">
-                <img src="lampada.png" alt="">
-                Tecnologia
-            </a>
+          <a href="#">
+            <img src="lampada.png" alt="Tecnologia" />
+            Tecnologia
+          </a>
 
-            <a href="#">
-                <img src="arquivo-js.png" alt="">
-                React JS
-            </a>
+          <a href="#">
+            <img src="arquivo-js.png" alt="React JS" />
+            React JS
+          </a>
 
-            <a href="#">
-                <img src="html.png" alt="">
-                HTML & CSS
-            </a>
+          <a href="#">
+            <img src="html.png" alt="HTML & CSS" />
+            HTML & CSS
+          </a>
         </div>
 
         <!-- DIREITA – SETA PARA CIMA -->
         <div class="footer-right">
-            <a href="#topo">
-                <img src="../blog/chevron.png" alt="Voltar ao topo" class="top-arrow">
-            </a>
+          <a href="#topo">
+            <img
+              src="../blog/chevron.png"
+              alt="Voltar ao topo"
+              class="top-arrow"
+            />
+          </a>
         </div>
-
-    </div>
-</footer>
-
+      </div>
+    </footer>
 
     <script src="../../scripts/jsBLOG/homeScript.js"></script>
   </body>
