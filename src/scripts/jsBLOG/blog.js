@@ -226,3 +226,46 @@ document.head.appendChild(style);
 // Tornar funções globais
 window.carregarPost = carregarPost;
 window.navegarParaPost = navegarParaPost;
+
+// scripts/back-to-top.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Seleciona o botão
+    const backToTopBtn = document.querySelector('.back-to-top');
+    
+    if (!backToTopBtn) return;
+    
+    // Adiciona classe inicial
+    backToTopBtn.classList.add('back-to-top-hidden');
+    
+    // Mostrar/ocultar botão ao rolar
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.remove('back-to-top-hidden');
+            backToTopBtn.classList.add('back-to-top-visible');
+        } else {
+            backToTopBtn.classList.remove('back-to-top-visible');
+            backToTopBtn.classList.add('back-to-top-hidden');
+        }
+    });
+    
+    // Rolagem suave ao clicar
+    backToTopBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Rolagem suave
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+        
+        // Foco no topo para acessibilidade
+        document.body.focus();
+    });
+    
+    // Adiciona id ao topo da página para navegação
+    const topElement = document.createElement('div');
+    topElement.id = 'topo';
+    topElement.style.position = 'absolute';
+    topElement.style.top = '0';
+    document.body.prepend(topElement);
+});
