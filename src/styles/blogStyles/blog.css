@@ -350,6 +350,40 @@ body {
     line-height: 1.4;
 }
 
+/* SETA PARA VOLTAR AO TOPO */
+/* SETA PARA VOLTAR AO TOPO */
+.footer-right {
+    display: flex;
+    align-items: flex-end;
+}
+
+.back-to-top {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.back-to-top:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #8a7dff 0%, #9d92ff 100%);
+}
+
+.top-arrow {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1); /* Torna a seta branca */
+    transition: transform 0.3s ease;
+}
+
+.back-to-top:hover .top-arrow {
+    transform: translateY(-2px);
+}
+
 /* RODAPÉ INFERIOR */
 /* RODAPÉ INFERIOR CORRIGIDO (IGUAL AO DA IMAGEM) */
 /* FUNDO DO RODAPÉ */
@@ -420,6 +454,121 @@ body {
 
 .footer-right a:hover .top-arrow {
     opacity: 0.8;
+}
+
+/* ------------------------------ */
+/* COMPARTILHAMENTO */
+/* ------------------------------ */
+
+/* ------------------------------ */
+/* COMPARTILHAMENTO */
+/* ------------------------------ */
+
+.share {
+    width: 70%;
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 25px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.share-content {
+    display: flex;
+    flex-direction: column; /* Organiza em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    gap: 15px; /* Espaço entre texto e ícones */
+}
+
+/* TEXTO - Centralizado acima dos ícones */
+.share-text {
+    text-align: center;
+}
+
+.share-text strong {
+    font-size: 18px;
+    color: #0f0b26;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* ÍCONES - Centralizados e com espaçamento uniforme */
+.share-icons {
+    display: flex;
+    gap: 35px; /* Espaçamento maior e uniforme */
+    align-items: center;
+    justify-content: center;
+}
+
+.share-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px; /* Tamanho fixo */
+    height: 44px; /* Tamanho fixo */
+    background: transparent;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.share-icon:hover {
+    background: #f5f5f7;
+    transform: translateY(-2px);
+}
+
+.share-icon img {
+    width: 22px; /* Tamanho proporcional */
+    height: 22px; /* Tamanho proporcional */
+    object-fit: contain;
+    filter: brightness(0.7);
+    transition: all 0.3s ease;
+}
+
+.share-icon:hover img {
+    filter: brightness(1);
+    transform: scale(1.1);
+}
+
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .share {
+        width: 90%;
+        margin: 40px auto;
+    }
+    
+    .share-icons {
+        gap: 25px;
+    }
+    
+    .share-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .share-icon img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .share-icons {
+        gap: 20px;
+    }
+    
+    .share-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .share-icon img {
+        width: 18px;
+        height: 18px;
+    }
 }
 
 /* RESPONSIVIDADE */
