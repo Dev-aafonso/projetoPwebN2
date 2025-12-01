@@ -13,26 +13,42 @@
   --color-warning: #f59e0b;
 
   /* Gradientes */
-  --gradient-hero: linear-gradient(135deg, #b3a04c, #ffda34);
+  --gradient-hero: linear-gradient(135deg, #ffda34, #b3a04c);
   --gradient-card: linear-gradient(135deg, #f3f4f6, #e5e7eb);
 
   /* Cores de borda */
   --border-light: #e5e7eb;
   --border-medium: #d1d5db;
 
-  /* Layout */
-  --max-width: 1400px; /* AUMENTADO de 1280px para 1400px */
-  --radius: 8px;
-  --gap: 24px;
+  /* Layout - REDUZIDOS SIGNIFICATIVAMENTE */
+  --max-width: 1200px;
+  --radius: 6px;
+  --gap: 20px;
   --fw-regular: 400;
   --fw-medium: 600;
   --fw-bold: 700;
 
-  /* Sombras */
+  /* Breakpoints */
+  --bp-xs: 320px;
+  --bp-sm: 576px;
+  --bp-md: 768px;
+  --bp-lg: 992px;
+  --bp-xl: 1200px;
+  --bp-xxl: 1400px;
+
+  /* Container max widths responsivos */
+  --container-sm: 540px;
+  --container-md: 720px;
+  --container-lg: 960px;
+  --container-xl: 1140px;
+  --container-xxl: 1320px;
+
+  /* Sombras mais sutis */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 3px 5px -1px rgb(0 0 0 / 0.08),
+    0 2px 3px -1px rgb(0 0 0 / 0.06);
+  --shadow-lg: 0 8px 12px -3px rgb(0 0 0 / 0.1),
+    0 3px 5px -2px rgb(0 0 0 / 0.08);
 }
 
 /* ===== RESET ===== */
@@ -47,10 +63,11 @@ body {
   font-family: "Inter", sans-serif;
   background-color: var(--color-white);
   color: var(--color-dark);
-  line-height: 1.6;
+  line-height: 1.5;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
 }
 
 img {
@@ -63,5 +80,36 @@ img {
   width: 100%;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 16px;
+}
+
+/* Containers responsivos */
+@media (min-width: var(--bp-sm)) {
+  .container {
+    max-width: var(--container-sm);
+  }
+}
+
+@media (min-width: var(--bp-md)) {
+  .container {
+    max-width: var(--container-md);
+  }
+}
+
+@media (min-width: var(--bp-lg)) {
+  .container {
+    max-width: var(--container-lg);
+  }
+}
+
+@media (min-width: var(--bp-xl)) {
+  .container {
+    max-width: var(--container-xl);
+  }
+}
+
+@media (min-width: var(--bp-xxl)) {
+  .container {
+    max-width: var(--container-xxl);
+  }
 }
