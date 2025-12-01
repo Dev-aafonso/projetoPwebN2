@@ -21,7 +21,7 @@
   --border-medium: #d1d5db;
 
   /* Layout */
-  --max-width: 1280px;
+  --max-width: 1400px; /* AUMENTADO de 1280px para 1400px */
   --radius: 8px;
   --gap: 24px;
   --fw-regular: 400;
