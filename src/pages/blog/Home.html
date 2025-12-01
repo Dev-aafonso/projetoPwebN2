@@ -25,37 +25,35 @@
 
       <!-- HEADER -->
       <header class="site-header">
-    <div class="container header-inner">
-        <!-- LOGO -->
-        <div class="brand">
-            <h1 class="logo"><span>S4</span>Blog</h1>
-        </div>
+        <div class="container header-inner">
+          <div class="brand">
+            <a href="#" class="logo"><span>S4</span>Blog</a>
+          </div>
 
-        <!-- MENU DE NAVEGAÇÃO -->
-        <nav class="main-nav" aria-label="menu principal">
-            <ul class="menu">
-                <li>
-                    <a href="#tecnologia" class="menu-item">
-                        <img src="lampada.png" alt="Tecnologia" class="nav-icon">
-                        Tecnologia
-                    </a>
-                </li>
-                <li>
-                    <a href="#react" class="menu-item">
-                        <img src="arquivo-js.png" alt="React JS" class="nav-icon">
-                        React JS
-                    </a>
-                </li>
-                <li>
-                    <a href="#html-css" class="menu-item">
-                        <img src="html.png" alt="HTML & CSS" class="nav-icon">
-                        HTML & CSS
-                    </a>
-                </li>
+          <nav class="main-nav" aria-label="menu principal">
+            <ul>
+              <li>
+                <a href="#tecnologia">
+                  <img src="lampada.png" alt="Tecnologia" class="nav-icon" />
+                  Tecnologia
+                </a>
+              </li>
+              <li>
+                <a href="#react">
+                  <img src="arquivo-js.png" alt="React JS" class="nav-icon" />
+                  React JS
+                </a>
+              </li>
+              <li>
+                <a href="#html-css">
+                  <img src="html.png" alt="HTML & CSS" class="nav-icon" />
+                  HTML & CSS
+                </a>
+              </li>
             </ul>
-        </nav>
-    </div>
-</header>
+          </nav>
+        </div>
+      </header>
 
       <!-- CONTEÚDO DO HERO -->
       <div class="hero-content">
@@ -78,15 +76,15 @@
     </section>
 
     <!-- MAIN -->
-    <main class="container main">
-      <div class="main-grid">
-        <!-- COLUNA PRINCIPAL -->
-        <section class="col-left">
-          <!-- TÍTULO PRINCIPAL "TECH BLOG" -->
-          <div class="main-title-section">
-            <h1 class="main-title">TECH BLOG </h1>
-          </div>
+    <main class="main">
+      <div class="container">
+        <!-- TÍTULO PRINCIPAL "TECH BLOG" -->
+        <div class="main-title-section">
+          <h1 class="main-title">TECH BLOG</h1>
+        </div>
 
+        <!-- SEÇÃO COM DESTAQUE E SIDEBAR LADO A LADO -->
+        <div class="featured-sidebar-container">
           <!-- SEÇÃO "EM DESTAQUE" -->
           <section class="featured-section">
             <h2 class="featured-title">Em destaque</h2>
@@ -106,46 +104,45 @@
             </article>
           </section>
 
-          <!-- ARTIGOS -->
-          <section class="articles" id="artigos">
-            <div class="articles-header">
-              <h2>Artigos</h2>
-              <span class="articles-count"></span>
+          <!-- SIDEBAR -->
+          <aside class="col-right" aria-label="Mais populares">
+            <h3 class="sidebar-title">Mais populares</h3>
+
+            <!-- POPULAR LIST (será preenchido pelo JS) -->
+            <ul class="popular-list">
+              <!-- Os itens populares serão gerados dinamicamente pelo JavaScript -->
+            </ul>
+          </aside>
+        </div>
+
+        <!-- ARTIGOS -->
+        <section class="articles" id="artigos">
+          <div class="articles-header">
+            <h2>Artigos</h2>
+            <div class="articles-search-wrapper">
+              <form class="search-form" action="#" method="get">
+                <input
+                  type="search"
+                  placeholder="Pesquisar por artigo ou tema..."
+                  name="q"
+                  aria-label="Pesquisar"
+                />
+                <button type="submit" aria-label="Buscar">🔍</button>
+              </form>
             </div>
-
-            <!-- ARTICLES GRID (será preenchido pelo JS) -->
-            <div class="articles-grid">
-              <!-- Os cards serão gerados dinamicamente pelo JavaScript -->
-            </div>
-
-            <!-- LOAD MORE BUTTON WRAPPER -->
-            <div class="load-more-wrap">
-              <!-- Botão será criado dinamicamente pelo JS quando necessário -->
-            </div>
-          </section>
-        </section>
-
-        <!-- SIDEBAR -->
-        <aside class="col-right" aria-label="Mais populares e pesquisa">
-          <h3 class="sidebar-title">Mais populares</h3>
-
-          <!-- POPULAR LIST (será preenchido pelo JS) -->
-          <ul class="popular-list">
-            <!-- Os itens populares serão gerados dinamicamente pelo JavaScript -->
-          </ul>
-
-          <div class="search-form-wrap">
-            <form class="search-form" action="#" method="get">
-              <input
-                type="search"
-                placeholder="Pesquisar por artigo ou tema..."
-                name="q"
-                aria-label="Pesquisar"
-              />
-              <button type="submit" aria-label="Buscar">🔍</button>
-            </form>
+            <span class="articles-count"></span>
           </div>
-        </aside>
+
+          <!-- ARTICLES GRID (será preenchido pelo JS) -->
+          <div class="articles-grid">
+            <!-- Os cards serão gerados dinamicamente pelo JavaScript -->
+          </div>
+
+          <!-- LOAD MORE BUTTON WRAPPER -->
+          <div class="load-more-wrap">
+            <!-- Botão será criado dinamicamente pelo JS quando necessário -->
+          </div>
+        </section>
       </div>
     </main>
 
@@ -182,12 +179,15 @@
         </div>
 
         <!-- DIREITA – SETA PARA CIMA -->
-        <!-- DIREITA – SETA PARA CIMA -->
-<div class="footer-right">
-    <a href="#topo" class="back-to-top" aria-label="Voltar ao topo">
-        <img src="../blog/chevron.png" alt="Voltar ao topo" class="top-arrow">
-    </a>
-</div>
+        <div class="footer-right">
+          <a href="#topo">
+            <img
+              src="../blog/chevron.png"
+              alt="Voltar ao topo"
+              class="top-arrow"
+            />
+          </a>
+        </div>
       </div>
     </footer>
 

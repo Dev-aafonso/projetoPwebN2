@@ -4,27 +4,88 @@
 }
 
 .articles-header {
-  font-size: 20px;
-  margin-bottom: 24px;
+  font-size: 22px;
+  margin-bottom: 28px;
   color: var(--color-dark);
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 16px;
 }
 
 .articles-count {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--color-muted);
   font-weight: 500;
+  order: 3;
+  width: 100%;
+  margin-top: 8px;
+  text-align: right;
 }
 
+/* SEARCH FORM AO LADO DIREITO */
+.articles-search-wrapper {
+  margin-left: auto;
+  max-width: 500px;
+  margin-right: 20px;
+  width: 100%;
+}
+
+.articles-search-wrapper .search-form {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 46px;
+  background: #f9fafb;
+  transition: all 0.2s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.articles-search-wrapper .search-form:focus-within {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(112, 99, 240, 0.15);
+}
+
+.articles-search-wrapper .search-form input[type="search"] {
+  flex-grow: 1;
+  border: none;
+  padding: 0 18px;
+  font-size: 15px;
+  height: 100%;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+}
+
+.articles-search-wrapper .search-form button {
+  background: var(--color-primary);
+  border: none;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 17px;
+  padding: 0 20px;
+  height: 100%;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100px;
+}
+
+.articles-search-wrapper .search-form button:hover {
+  background: #5a4fd0;
+}
+
+/* AUMENTAR GRID DE ARTIGOS */
 .articles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 32px;
 }
 
 .card {
@@ -36,10 +97,11 @@
   flex-direction: column;
   transition: all 0.3s ease;
   box-shadow: var(--shadow-sm);
+  height: 100%;
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
   border-color: var(--border-medium);
 }
@@ -53,7 +115,7 @@
 }
 
 .card-media {
-  height: 160px;
+  height: 180px;
   background: #e5e7eb;
   overflow: hidden;
   position: relative;
@@ -71,7 +133,7 @@
 }
 
 .card-body {
-  padding: 18px;
+  padding: 20px;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -79,16 +141,16 @@
 
 .card-category {
   display: block;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--color-primary);
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .card-body h4 {
-  font-size: 16px;
+  font-size: 18px;
   margin-bottom: 0;
   color: var(--color-dark);
   font-weight: 600;
@@ -98,10 +160,111 @@
 
 .card-meta {
   display: flex;
-  gap: 6px;
+  gap: 8px;
   color: var(--color-muted);
-  font-size: 12px;
-  margin-top: 10px;
+  font-size: 13px;
+  margin-top: 12px;
   align-items: center;
   flex-wrap: wrap;
+}
+
+/* ===== LISTA POPULAR NA SIDEBAR ===== */
+.popular-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 44px;
+}
+
+.popular-item {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: block;
+  position: relative;
+}
+
+/* REMOVER A LINHA APÓS O ÚLTIMO ITEM */
+.popular-item:last-child::after {
+  display: none;
+}
+
+.popular-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  margin: 0 10px;
+}
+
+/* AJUSTAR POPULAR LINK PARA SIDEBAR MAIS ESTREITA */
+.popular-link {
+  display: flex;
+  gap: 12px; /* REDUZIDO de 14px para 12px */
+  align-items: flex-start;
+  width: 100%;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  padding: 8px; /* REDUZIDO de 10px para 8px */
+  border-radius: 6px;
+}
+
+.popular-link:hover {
+  background: #f8f9fa;
+  transform: translateX(5px);
+  border-left: 4px solid var(--color-primary);
+}
+
+/* REDUZIR TAMANHO DA THUMB PARA SIDEBAR MAIS ESTREITA */
+.thumb {
+  width: 70px; /* REDUZIDO de 90px para 70px */
+  height: 60px; /* REDUZIDO de 70px para 60px */
+  background: #e5e7eb;
+  border-radius: 6px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popular-meta {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.popular-category {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.popular-title {
+  font-weight: 600;
+  color: var(--color-dark);
+  font-size: 14px; /* REDUZIDO de 15px para 14px */
+  line-height: 1.4;
+  margin-bottom: 6px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.popular-stats {
+  color: var(--color-muted);
+  font-size: 12px; /* REDUZIDO de 13px para 12px */
 }
