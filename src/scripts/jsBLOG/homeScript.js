@@ -63,7 +63,7 @@ async function carregarTodosDados() {
     // Carregar todos os componentes
     carregarPostDestaque(postsFiltrados[0]);
     carregarArtigosPagina();
-    carregarPopulares(postsFiltrados.slice(0, 3)); // ALTERADO: de 4 para 3 itens
+    carregarPopulares(postsFiltrados.slice(0, 4)); // ALTERADO: de 3 para 4 itens
     atualizarEstatisticas(postsFiltrados);
 
     esconderLoading();
@@ -352,8 +352,8 @@ function realizarBusca(termo) {
     // Recarrega artigos com paginação
     carregarArtigosPagina();
     
-    // Atualiza os populares com base na busca - ALTERADO: de 4 para 3 itens
-    carregarPopulares(postsFiltrados.slice(0, 3));
+    // Atualiza os populares com base na busca - ALTERADO: de 3 para 4 itens
+    carregarPopulares(postsFiltrados.slice(0, 4));
 
     // Mostrar contador de resultados
     mostrarContadorResultados(postsFiltrados.length, termo);
@@ -439,10 +439,10 @@ function limparBusca() {
   postsFiltrados = [...allPosts];
   currentPage = 1;
   
-  // Recarregar todos os dados originais - ALTERADO: de 4 para 3 itens
+  // Recarregar todos os dados originais - ALTERADO: de 3 para 4 itens
   carregarPostDestaque(postsFiltrados[0]);
   carregarArtigosPagina();
-  carregarPopulares(postsFiltrados.slice(0, 3));
+  carregarPopulares(postsFiltrados.slice(0, 4));
   atualizarEstatisticas(postsFiltrados);
 }
 
