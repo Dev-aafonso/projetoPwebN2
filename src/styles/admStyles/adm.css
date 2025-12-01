@@ -6,7 +6,7 @@
 @import url('base.css');
 
 /* 2. Layout - Estrutura, grid e componentes de layout */
-@import url('layout.css');
+@import url('layoutADM.css');
 
 /* 3. Components - Botões, cards e componentes reutilizáveis */
 @import url('components.css');
