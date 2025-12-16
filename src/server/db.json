@@ -55,15 +55,6 @@
       "data": "2025-11-20T18:37:48.469Z"
     },
     {
-      "id": "c46d",
-      "autor": "Afonso",
-      "titulo": "A comunicação no mundo digital",
-      "categoria": "Tecnologia",
-      "imagem": "https://img.jaenoticia.com.br/mXK1L7_g9tXInf8Zhs24x2YqHHo=/736x431/smart/s3.jaenoticia.com.br/uploads/imagens/blog_1477.jpeg",
-      "conteudo": "Neste período de pandemia e isolamento social tivemos que gerar transformação nas nossas vidas. Nossa rotina e costumes não são mais os mesmos, mudamos repentinamente pela necessidade, pois novas habilidades e competência tivemos que desenvolver para seguir nosso dia a dia cheio de informações e novas formas de comunicação digital.",
-      "data": "2025-11-20T18:38:22.217Z"
-    },
-    {
       "autor": "Afonso Filho",
       "titulo": "Inteligencia artificial, robótica y mujeres: una nueva revolución",
       "categoria": "Tecnologia",
@@ -142,15 +133,44 @@
       "id": "139f"
     },
     {
+      "id": "c0b9",
+      "autor": "Afonso Filho",
+      "titulo": "Como aprender o básico de programação",
+      "categoria": "PROGRAMAÇÃO",
+      "imagem": "https://blog.ebaconline.com.br/blog/wp-content/uploads/2022/12/ffapu6nxbihe77kajjmeh-e1674740233107.png",
+      "conteudo": "Poucas carreiras são tão atrativas hoje quanto as na área de tecnologia. É fácil entender o porquê: as possibilidades de atuação são vastas e se aplicam a todos os setores da economia.\n\nAs vagas de trabalho costumam ser bem remuneradas, e a demanda é crescente. Até 2025, a procura no Brasil será por cerca de 800 mil novos talentos em programação, desenvolvimento e afins. Esses são os dados de recente pesquisa da Brasscom (Associação das Empresas de Tecnologia da Informação e Comunicação).\n\nPor se tratar de uma carreira tão recente, as profissões ainda estão sendo regulamentadas. Isso significa que autodidatas dedicados conseguem ir tão longe ou até mais do que alguém que fez uma faculdade. E, se a ideia de se dedicar a uma carreira nessa área já passou pela sua cabeça, não importa onde você quer chegar, você vai partir deste ponto: aprender o básico de programação.",
+      "ultimaEdicao": "2025-12-08T02:09:50.492Z",
+      "data": "2025-12-08T02:09:50.492Z"
+    },
+    {
+      "id": "66e3",
       "autor": "Luiz Thomas",
-      "titulo": "Entenda o que é desenvolvimento de software e como funciona o processo",
-      "categoria": "DSV. SOFT.",
-      "imagem": "https://blog.runrun.it/wp-content/uploads/2023/12/142695-Clusterizacao-DEV-Desenvolvimento-de-software-blog-2.png",
-      "conteudo": "Apps, software para computadores, aplicações acessíveis pela internet, plataformas bancárias online, serviços de streaming: qual é o elo comum entre todos esses sistemas tecnológicos? Eles foram concebidos por meio de um método, um esquema, uma sistemática que parte do trabalho de desenvolvimento de software.\n\nEste campo se preocupa em compreender como criar plataformas digitais de forma eficiente, considerando as necessidades dos usuários. A engenharia de software, como área de conhecimento, dedica-se igualmente ao exame minucioso dessas questões, empregando uma abordagem rigorosa característica da engenharia.\n\nExplore esse artigo para desvendar como funciona esse processo de desenvolvimento de software e boas práticas para otimizar esse serviço tão essencial na era da informação digital.",
-      "data": "2025-11-26T21:23:16.609Z",
-      "dataBlog": "1, dez",
-      "horarioBlog": "Editado há 5 minutos",
-      "id": "916d"
+      "titulo": "Software de programação: Definição Para que serve?",
+      "categoria": "PROGRAMAÇÃO",
+      "imagem": "https://www.postposmo.com/wp-content/uploads/2020/07/4-5.jpg",
+      "conteudo": "Software é um componente do computador que não pode ser tocado, porém é o que faz o sistema funcionar, ou seja, é considerado o componente capaz de realizar ou executar qualquer tarefa dentro de qualquer sistema computacional.\n\n\nTambém podemos nos referir ao fato de que o software se encarrega de converter todas as instruções e levá-las ao processador, placa gráfica ou ao componente que executa as instruções que queremos alcançar através do resultado esperado, ou seja, o software é encarregado de traduzir os dados processados ​​pelo hardware para serem vistos na tela de forma simples.\n\nExistem três grupos de software denominados: software de sistema, software de programação e software aplicativo, atualmente esses grupos podem ser classificados em grupos de software livre ou software proprietário ou licenciado.",
+      "ultimaEdicao": "2025-12-08T02:10:37.977Z",
+      "data": "2025-12-08T02:10:37.977Z"
+    },
+    {
+      "id": "a35c",
+      "autor": "Afonso Filho",
+      "titulo": "Conheça as principais formas de como praticar programação do jeito certo e que seja de total utilidade no decorrer dos seus estudos.",
+      "categoria": "TECNOLOGIA",
+      "imagem": "https://umdesenvolvedoriniciante.com/wp-content/uploads/2020/10/praticar-programacao-todos-os-dias.jpg.webp",
+      "conteudo": "Afinal de contas, a programação e o desenvolvimento web requer uma prática constante de todo o seu aprendizado.\n\nNão adianta ficar apenas na teoria, tem que colocar a mão na massa e transmitir para o seu projeto tudo aquilo que você aprendeu.\n\nSabia que é fácil colocar isso em prática utilizando algumas ideias no dia-a-dia?\n\nNo final desse artigo irei te indicar os melhores sites para você praticar e treinar programação.",
+      "ultimaEdicao": "2025-12-08T02:11:10.289Z",
+      "data": "2025-12-08T02:11:10.289Z"
+    },
+    {
+      "id": "5da9",
+      "autor": "Luiz Thomas",
+      "titulo": "Como são as aulas de programação com um professor particular?",
+      "categoria": "INFORMÁTICA",
+      "imagem": "https://cdn-blog.superprof.com/blog_br/wp-content/uploads/2021/08/aula-programacao-telas.jpeg.webp",
+      "conteudo": "Você ama tecnologias da informação, programação de sistemas e ciências da computação? Então você sabia que 63% dos programadores aprenderam a programar por conta própria, e que 32% dos desenvolvedores web começaram a programar antes dos 15 anos de idade? Estas informações foram coletadas por um estudo feito com 2.500 usuários pela plataforma CodinGame em 2018.\n\nSendo assim, fica claro que é possível aprender a programar estudando sozinho através de livros ou acompanhando tutoriais em vídeo pelo YouTube. No entanto, não vamos negar que é bem mais fácil recorrer a um professor particular, pois com ele você vai poupar um tempo precioso, assim como evitar muitas decepções.\n\nMas como funciona um curso de programação? Será que o processo é o mesmo que aquele para aulas particulares de matemática, aulas de inglês em casa ou aulas de português? Então não desgrude os olhos desta matéria, pois você encontrará todas as respostas que procura abaixo!\n\nPreparamos também um manual com informações sobre aulas de programação.",
+      "ultimaEdicao": "2025-12-08T02:11:54.898Z",
+      "data": "2025-12-08T02:11:54.898Z"
     }
   ]
 }

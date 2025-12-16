@@ -1,0 +1,252 @@
+/* ===== ESTILOS DO BLOG SINCRONIZADO ===== */
+
+/* Loading States */
+.loading-blog {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 16px;
+  color: var(--color-muted);
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--border-light);
+  border-left: 3px solid var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estados de Erro e Vazio */
+.error-message,
+.empty-state-blog,
+.no-results,
+.empty-articles {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 24px;
+  color: var(--color-muted);
+  background: #f8f9fa;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+}
+
+.error-message h3,
+.empty-state-blog h3,
+.no-results h3 {
+  color: var(--color-dark);
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.error-message p,
+.empty-state-blog p,
+.no-results p {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.error-actions,
+.empty-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+/* Contador de Resultados */
+.contador-resultados {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: var(--radius);
+  margin-bottom: 16px;
+  color: var(--color-dark);
+  font-size: 13px;
+}
+
+.contador-resultados strong {
+  color: var(--color-primary);
+}
+
+.btn-limpar-busca {
+  background: none;
+  border: none;
+  color: var(--color-muted);
+  cursor: pointer;
+  padding: 3px 6px;
+  border-radius: 3px;
+  transition: all 0.2s ease;
+  font-size: 14px;
+}
+
+.btn-limpar-busca:hover {
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Notificações */
+.notification-sync {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  background: var(--color-success);
+  color: white;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  z-index: 10000;
+  animation: slideIn 0.3s ease;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animações de entrada */
+.card,
+.popular-item,
+.featured-card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Delay para animação em cascata */
+.card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+.popular-item:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.popular-item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.popular-item:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* ===== UTILITÁRIOS RESPONSIVOS ===== */
+
+/* Classes utilitárias para responsividade */
+.hide-on-mobile {
+  display: block;
+}
+
+.show-on-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  .show-on-mobile {
+    display: block !important;
+  }
+
+  .loading-blog {
+    padding: 30px 16px;
+  }
+
+  .loading-spinner {
+    width: 28px;
+    height: 28px;
+  }
+
+  .error-message,
+  .empty-state-blog {
+    padding: 30px 20px;
+  }
+
+  .error-message h3,
+  .empty-state-blog h3 {
+    font-size: 18px;
+  }
+
+  .notification-sync {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    text-align: center;
+  }
+}
+
+/* Animações otimizadas para dispositivos móveis */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .popular-item,
+  .featured-card,
+  .notification-sync {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Suporte a toque em dispositivos móveis */
+@media (hover: none) {
+  .btn-carregar-mais:hover {
+    transform: none;
+    background: transparent;
+    color: var(--color-primary);
+  }
+
+  .btn-carregar-mais:active {
+    background: var(--color-primary);
+    color: var(--color-white);
+    transform: scale(0.98);
+  }
+}

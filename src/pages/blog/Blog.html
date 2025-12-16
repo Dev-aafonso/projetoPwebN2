@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>S4Blog - Artigo</title>
     <link rel="stylesheet" href="../../styles/blogStyles/blog.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-            <!-- CABEÇALHO -->
+    <!-- CABEÇALHO -->
     <header class="header">
         <div class="header-top">
             <h1 class="logo"><span>S4</span>Blog</h1>
             
             <nav class="main-nav" aria-label="menu principal">
-  <ul class="menu">
-    <li>
-        <a href="#tecnologia" class="menu-item">
-            <img src="lampada.png" alt="Tecnologia" class="menu-icon">
-            Tecnologia
-        </a>
-    </li>
-    <li>
-        <a href="#react" class="menu-item">
-            <img src="arquivo-js.png" alt="React JS" class="menu-icon">
-            React JS
-        </a>
-    </li>
-    <li>
-        <a href="#html-css" class="menu-item">
-            <img src="html.png" alt="HTML & CSS" class="menu-icon">
-            HTML & CSS
-        </a>
-    </li>
-</ul>
-</nav>
+                <ul class="menu">
+                    <li>
+                        <a href="#tecnologia" class="menu-item">
+                            <img src="img/lampada.png" alt="Tecnologia" class="menu-icon">
+                            Tecnologia
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#react" class="menu-item">
+                            <img src="img/arquivo-js.png" alt="React JS" class="menu-icon">
+                            React JS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#html-css" class="menu-item">
+                            <img src="img/html.png" alt="HTML & CSS" class="menu-icon">
+                            HTML & CSS
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
 
         <div class="back-section">
@@ -44,14 +45,12 @@
             </a>
         </div>
     </header>
-<main class="main-content">
 
-
+    <main class="main-content">
         <!-- IMAGEM CENTRALIZADA -->
         <section class="imagem-container">
             <div class="imagem-centralizada">
-                <!-- COLOQUE SUA IMAGEM AQUI -->
-                <img src="image.png" alt="Imagem do artigo" class="imagem-personalizada">
+                <img src="img/image.png" alt="Imagem do artigo" class="imagem-personalizada">
             </div>
         </section>
 
@@ -76,6 +75,7 @@
 
                 <h3>Como utilizar a biblioteca</h3>
                 <p>Para usar React, basta criar componentes que representam partes da interface e combiná-los para formar o sistema. A sintaxe JSX facilita o processo, tornando o desenvolvimento mais direto, rápido e organizado em qualquer tipo de projeto.</p>
+                
                 <h3>Vantagens do React JS</h3>
                 <ul>
                     <li>Integração fácil.</li>
@@ -83,6 +83,7 @@
                     <li>Alto desempenho.</li>
                     <li>Comunidade gigante.</li>
                 </ul>
+                
                 <p>O React oferece integração rápida, componentes reutilizáveis e excelente performance. Sua comunidade ativa garante evolução constante e muitas soluções prontas, tornando a biblioteca ideal para aplicações modernas.</p>
 
                 <h3>Conclusão</h3>
@@ -93,100 +94,96 @@
         <!-- COMPARTILHAMENTO -->
         <div class="share">
             <strong>Compartilhe esse conteúdo</strong>
+            <div class="share-buttons">
+                <button class="share-btn facebook" aria-label="Compartilhar no Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+                <button class="share-btn twitter" aria-label="Compartilhar no Twitter">
+                    <i class="fab fa-twitter"></i>
+                </button>
+                <button class="share-btn linkedin" aria-label="Compartilhar no LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </button>
+                <button class="share-btn whatsapp" aria-label="Compartilhar no WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </button>
+            </div>
         </div>
     </main>
 
     <!-- RODAPÉ FINAL -->
     <footer class="footer">
         <div class="footer-content">
-            <!-- ARTIGOS RELACIONADOS -->
+            <!-- ARTIGOS RELACIONADOS (serão carregados dinamicamente) -->
             <section class="related">
                 <h2>Artigos semelhantes</h2>
                 
-                <div class="related-grid">
-                    <!-- Artigo 1 -->
-                    <div class="rel-card">
-                        <div class="rel-img">
-                            <img src="RV.jpg" alt="Realidade virtual" class="imagem-card">
+                <div class="related-grid" id="relatedPosts">
+                    <!-- Os artigos serão carregados dinamicamente pelo JavaScript -->
+                    <div class="loading-related">
+                        <div class="loading-spinner">
+                            <i class="fas fa-spinner fa-spin"></i>
                         </div>
-                        <div class="rel-content">
-                            <span class="rel-cat">TECHNOLOGIA</span>
-                            <h3 class="rel-title">Realidade virtual: Entendendo a tecnologia</h3>
-                            <div class="rel-meta">16, Pov. – Editado há 12 minutos</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Artigo 2 -->
-                    <div class="rel-card">
-                        <div class="rel-img">
-                            <img src="TEC.webp" alt="Insegurança na escrita" class="imagem-card">
-                        </div>
-                        <div class="rel-content">
-                            <span class="rel-cat">TECHNOLOGIA</span>
-                            <h3 class="rel-title">Você fica inseguro(a) na hora de escrever?</h3>
-                            <div class="rel-meta">16, Pov. – Editado há 12 minutos</div>
-                        </div>
-                    </div>
-                    
-                    <!-- Artigo 3 -->
-                    <div class="rel-card">
-                        <div class="rel-img">
-                            <img src="JS.jpg" alt="React Native" class="imagem-card">
-                        </div>
-                        <div class="rel-content">
-                            <span class="rel-cat">TECHNOLOGIA</span>
-                            <h3 class="rel-title">React Native Weekend - 21º na minha visão</h3>
-                            <div class="rel-meta">16, Pov. – Editado há 12 minutos</div>
-                        </div>
+                        <p>Carregando artigos relacionados...</p>
                     </div>
                 </div>
             </section>
 
             <!-- INFORMAÇÕES DA MARCA E MENU -->
             <div class="footer-final">
-    <footer class="footer">
-    <div class="footer-container">
+                <div class="footer-container">
+                    <!-- ESQUERDA -->
+                    <div class="footer-left">
+                        <h2>S4Blog</h2>
+                        <p>
+                            Tudo o que você precisa para evoluir no front-end.
+                            Conteúdo atualizado, direto e feito por quem vive código.
+                        </p>
+                    </div>
 
-        <!-- ESQUERDA -->
-        <div class="footer-left">
-            <h2>S4Blog</h2>
-            <p>
-                Tudo o que você precisa para evoluir no front-end.
-                Conteúdo atualizado, direto e feito por quem vive código.
-            </p>
+                    <!-- CENTRO -->
+                    <div class="footer-center">
+                        <h3>Menu</h3>
+                        <a href="#">
+                            <img src="img/lampada.png" alt="Tecnologia">
+                            Tecnologia
+                        </a>
+                        <a href="#">
+                            <img src="img/arquivo-js.png" alt="React JS">
+                            React JS
+                        </a>
+                        <a href="#">
+                            <img src="img/html.png" alt="HTML & CSS">
+                            HTML & CSS
+                        </a>
+                    </div>
+
+                    <!-- DIREITA – SETA PARA CIMA -->
+                    <div class="footer-right">
+                        <a href="#topo" class="top-link">
+                            <img src="img/chevron.png" alt="Voltar ao topo" class="top-arrow">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
+    </footer>
 
-        <!-- CENTRO -->
-        <div class="footer-center">
-            <h3>Menu</h3>
-
-            <a href="#">
-                <img src="lampada.png" alt="">
-                Tecnologia
-            </a>
-
-            <a href="#">
-                <img src="arquivo-js.png" alt="">
-                React JS
-            </a>
-
-            <a href="#">
-                <img src="html.png" alt="">
-                HTML & CSS
-            </a>
-        </div>
-
-        <!-- DIREITA – SETA PARA CIMA -->
-        <div class="footer-right">
-            <a href="#topo">
-                <img src="chevron.png" alt="Voltar ao topo" class="top-arrow">
-            </a>
-        </div>
-
-    </div>
-</footer>
-
-z    </footer>
-
+    <!-- Scripts -->
+    <script src="../../scripts/jsBLOG/blogScript.js"></script>
+    
+    <script>
+        // Script para funcionalidades específicas da página
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navegação suave para o topo
+            document.querySelector('.top-link').addEventListener('click', function(e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

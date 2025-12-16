@@ -1,4 +1,4 @@
-// Configuração da API - URL base para o JSON Server
+// Configuração da API - Mesmo endereço do blog principal
 const API_URL = "http://localhost:3000/posts";
 
 // ===== SELEÇÃO DE ELEMENTOS DA DOM =====
@@ -9,13 +9,13 @@ const emptyState = document.getElementById("emptyState"); // Mensagem "nenhum po
 const btnAdd = document.getElementById("btnAdd"); // Botão para adicionar novo post
 
 // Elementos dos modais (janelas pop-up)
-const modalOverlay = document.getElementById("modalOverlay"); // Modal de criar/editar
-const deleteModalOverlay = document.getElementById("deleteModalOverlay"); // Modal de excluir
+const modalOverlay = document.getElementById("modalOverlay"); // Modal de criar/editar post
+const deleteModalOverlay = document.getElementById("deleteModalOverlay"); // Modal de excluir post
 
 // Botões para fechar os modais
-const btnFechar = document.getElementById("btnFechar"); // Fechar modal criar/editar
+const btnFechar = document.getElementById("btnFechar"); // Fechar modal criar/editar (X)
 const btnFecharDelete = document.getElementById("btnFecharDelete"); // Fechar modal excluir (X)
-const btnCancelarDelete = document.getElementById("btnCancelarDelete"); // Cancelar exclusão
+const btnCancelarDelete = document.getElementById("btnCancelarDelete"); // Cancelar exclusão (botão)
 const btnConfirmarDelete = document.getElementById("btnConfirmarDelete"); // Confirmar exclusão
 
 // Elementos do formulário de postagem
@@ -24,45 +24,45 @@ const autorInput = document.getElementById("autor"); // Campo nome do autor
 const tituloInput = document.getElementById("titulo"); // Campo título do post
 const categoriaInput = document.getElementById("categoria"); // Campo categoria
 const imagemInput = document.getElementById("imagem"); // Campo URL da imagem
-const conteudoInput = document.getElementById("conteudo"); // Campo conteúdo
+const conteudoInput = document.getElementById("conteudo"); // Campo conteúdo (textarea)
 const modalTitle = document.getElementById("modalTitle"); // Título do modal (Criar/Editar)
 const postTitlePreview = document.getElementById("postTitlePreview"); // Preview do título no modal de excluir
 
 // ===== VARIÁVEIS DE ESTADO =====
 
-let editId = null; // Armazena o ID do post sendo editado (null se for novo)
+let editId = null; // Armazena o ID do post sendo editado (null se for novo post)
 let postToDelete = null; // Armazena o post selecionado para exclusão
 
 // Variáveis para controle de paginação
-let currentPage = 1; // Página atual sendo exibida
-const postsPerPage = 6; // Quantidade de posts por página
+let currentPage = 1; // Página atual sendo exibida (começa em 1)
+const postsPerPage = 6; // Quantidade de posts exibidos por página
 let allPosts = []; // Array com todos os posts carregados da API
 
 // ===== INICIALIZAÇÃO DA APLICAÇÃO =====
 
-// Quando o documento HTML estiver totalmente carregado
+// Quando o documento HTML estiver totalmente carregado e pronto
 document.addEventListener("DOMContentLoaded", function () {
-  listarTodosPosts(); // Carrega os posts da API
-  inicializarEventos(); // Configura todos os event listeners
-  adicionarPostsExemplo(); // Adiciona posts de exemplo se necessário
+  listarTodosPosts(); // 1. Carrega os posts da API
+  inicializarEventos(); // 2. Configura todos os event listeners
+  adicionarPostsExemplo(); // 3. Adiciona posts de exemplo se necessário
 });
 
 // ===== CONFIGURAÇÃO DE EVENT LISTENERS =====
 
-// Configura todos os eventos de clique e submit
+// Configura todos os eventos de clique e submit da página
 function inicializarEventos() {
   // Botão "Novo post" - abre modal de criação
   btnAdd.addEventListener("click", () => {
-    modalTitle.textContent = "Criar postagem"; // Altera título do modal
-    formPost.reset(); // Limpa o formulário
-    editId = null; // Reseta ID de edição
-    modalOverlay.classList.add("active"); // Mostra o modal
+    modalTitle.textContent = "Criar postagem"; // Altera título do modal para "Criar"
+    formPost.reset(); // Limpa todos os campos do formulário
+    editId = null; // Reseta ID de edição (indica que é novo post)
+    modalOverlay.classList.add("active"); // Mostra o modal adicionando classe "active"
   });
 
   // Botões para fechar modais
-  btnFechar.addEventListener("click", fecharModalCriar);
-  btnFecharDelete.addEventListener("click", fecharModalExcluir);
-  btnCancelarDelete.addEventListener("click", fecharModalExcluir);
+  btnFechar.addEventListener("click", fecharModalCriar); // X do modal criar/editar
+  btnFecharDelete.addEventListener("click", fecharModalExcluir); // X do modal excluir
+  btnCancelarDelete.addEventListener("click", fecharModalExcluir); // Botão "Cancelar"
 
   // Botão de confirmar exclusão
   btnConfirmarDelete.addEventListener("click", confirmarExclusao);
@@ -70,8 +70,9 @@ function inicializarEventos() {
   // Evento de submit do formulário (criar/editar post)
   formPost.addEventListener("submit", salvarPost);
 
-  // Fechar modais ao clicar fora do conteúdo (no overlay)
+  // Fechar modais ao clicar fora do conteúdo (no overlay escuro)
   modalOverlay.addEventListener("click", (e) => {
+    // Se clicou exatamente no overlay (não no conteúdo interno)
     if (e.target === modalOverlay) fecharModalCriar();
   });
 
@@ -84,8 +85,8 @@ function inicializarEventos() {
 
 // Fecha o modal de criar/editar e reseta o formulário
 function fecharModalCriar() {
-  modalOverlay.classList.remove("active"); // Esconde o modal
-  formPost.reset(); // Limpa todos os campos
+  modalOverlay.classList.remove("active"); // Remove classe "active" para esconder
+  formPost.reset(); // Limpa todos os campos do formulário
   editId = null; // Reseta o ID de edição
 }
 
@@ -102,36 +103,44 @@ async function listarTodosPosts() {
   try {
     // Faz requisição GET para a API
     const response = await fetch(API_URL);
-    allPosts = await response.json(); // Converte resposta para JSON
+    
+    // Converte resposta para JSON (array de posts)
+    allPosts = await response.json();
 
     // Ordena posts por data (do mais recente para o mais antigo)
-    allPosts.sort((a, b) => new Date(b.data) - new Date(a.data));
+    // Prioriza data de última edição, se existir
+    allPosts.sort((a, b) => {
+      const dataA = new Date(a.ultimaEdicao || a.data);
+      const dataB = new Date(b.ultimaEdicao || b.data);
+      return dataB - dataA;
+    });
 
     currentPage = 1; // Volta para a primeira página
     carregarPostsPagina(); // Carrega os posts da página atual
   } catch (error) {
     console.error("Erro ao carregar posts:", error);
-    emptyState.style.display = "block"; // Mostra mensagem de erro
+    emptyState.style.display = "block"; // Mostra mensagem de erro/estado vazio
   }
 }
 
-// Carrega e exibe os posts da página atual
+// Carrega e exibe os posts da página atual (6 por página)
 function carregarPostsPagina() {
   // Calcula índices para slice dos posts
+  // Ex: página 1: startIndex=0, endIndex=6 (posts 0-5)
   const startIndex = (currentPage - 1) * postsPerPage;
   const endIndex = startIndex + postsPerPage;
   const postsPagina = allPosts.slice(startIndex, endIndex); // Pega apenas os posts da página atual
 
   // Se for a primeira página, limpa o container antes de adicionar
   if (currentPage === 1) {
-    listaPosts.innerHTML = "";
+    listaPosts.innerHTML = ""; // Remove todos os filhos
   }
 
   // Verifica se não há posts para mostrar
   if (allPosts.length === 0) {
     emptyState.style.display = "block"; // Mostra estado vazio
     esconderBotaoCarregarMais(); // Esconde botão "carregar mais"
-    return;
+    return; // Sai da função
   }
 
   emptyState.style.display = "none"; // Esconde estado vazio
@@ -143,6 +152,7 @@ function carregarPostsPagina() {
   });
 
   // Controla a visibilidade do botão "Carregar mais"
+  // Se ainda há posts após os da página atual, mostra o botão
   if (endIndex < allPosts.length) {
     mostrarBotaoCarregarMais(); // Ainda há mais posts para carregar
   } else {
@@ -160,6 +170,8 @@ function mostrarBotaoCarregarMais() {
     btnCarregarMais.id = "btnCarregarMais";
     btnCarregarMais.className = "btn-carregar-mais";
     btnCarregarMais.innerHTML = '<i class="fas fa-plus"></i> Carregar mais';
+    
+    // Quando clicado, carrega mais posts
     btnCarregarMais.addEventListener("click", carregarMaisPosts);
 
     // Adiciona o botão após a lista de posts
@@ -180,16 +192,28 @@ function esconderBotaoCarregarMais() {
 
 // Carrega a próxima página de posts
 function carregarMaisPosts() {
-  currentPage++; // Incrementa a página atual
+  currentPage++; // Incrementa a página atual (1 -> 2, 2 -> 3, etc)
   carregarPostsPagina(); // Carrega os posts da nova página
 }
 
 // ===== CRIAÇÃO DE ELEMENTOS HTML =====
 
-// Cria o elemento HTML completo para um post
+// Cria o elemento HTML completo para um post (card)
 function criarPostElement(post) {
   const postCard = document.createElement("div");
   postCard.className = "post-card"; // Classe CSS para estilização
+
+  // Determina a data para exibição (data original ou data de edição)
+  const dataParaExibicao = post.ultimaEdicao || post.data;
+  const dataPost = new Date(dataParaExibicao);
+  const dia = dataPost.getDate(); // Dia do mês (1-31)
+  const mes = dataPost
+    .toLocaleDateString("pt-BR", { month: "short" }) // Nome abreviado do mês (fev, mar, etc.)
+    .replace(".", ""); // Remove o ponto da abreviação
+
+  // Verifica se o post foi editado
+  const foiEditado = post.ultimaEdicao && post.ultimaEdicao !== post.data;
+  const indicadorEdicao = foiEditado ? " (Editado)" : "";
 
   // Define o conteúdo da imagem: usa imagem real ou placeholder
   const imageContent =
@@ -204,13 +228,6 @@ function criarPostElement(post) {
              <i class="fas fa-image"></i>
          </div>`;
 
-  // Formata a data para exibição amigável (ex: "16, fev")
-  const dataPost = new Date(post.data);
-  const dia = dataPost.getDate(); // Dia do mês (1-31)
-  const mes = dataPost
-    .toLocaleDateString("pt-BR", { month: "short" }) // Nome abreviado do mês
-    .replace(".", ""); // Remove o ponto da abreviação
-
   // Template HTML do card do post
   postCard.innerHTML = `
         <div class="post-image">
@@ -218,15 +235,16 @@ function criarPostElement(post) {
         </div>
         <div class="post-content">
             <h3 class="post-title">${post.titulo}</h3>
-            <p class="post-excerpt">${post.conteudo.substring(0, 100)}${
+            <p class="post-excerpt">${post.conteudo.substring(0, 100)}${ // Primeiros 100 caracteres
     post.conteudo.length > 100 ? "..." : "" // Adiciona "..." se o conteúdo for muito longo
   }</p>
             <div class="post-meta">
                 <div class="post-tags">
                     <span class="tag">${post.categoria}</span>
+                    ${foiEditado ? '<span class="tag edited-tag">EDITADO</span>' : ''}
                 </div>
                 <div class="post-author">
-                    ${dia}, ${mes} ● 💬 ${post.autor}
+                    ${dia}, ${mes}${indicadorEdicao} ● 💬 ${post.autor} <!-- Data formatada e autor -->
                 </div>
             </div>
         </div>
@@ -243,19 +261,19 @@ function criarPostElement(post) {
   // Adiciona eventos aos botões de ação do post
   postCard
     .querySelector(".btn-edit")
-    .addEventListener("click", () => editarPost(post));
+    .addEventListener("click", () => editarPost(post)); // Editar este post
   postCard
     .querySelector(".btn-delete")
-    .addEventListener("click", () => abrirModalExclusao(post));
+    .addEventListener("click", () => abrirModalExclusao(post)); // Excluir este post
 
   return postCard; // Retorna o elemento criado
 }
 
-// ===== OPERAÇÕES CRUD =====
+// ===== OPERAÇÕES CRUD (Create, Read, Update, Delete) =====
 
 // Preenche o formulário com dados do post para edição
 function editarPost(post) {
-  // Preenche todos os campos do formulário
+  // Preenche todos os campos do formulário com dados do post
   autorInput.value = post.autor;
   tituloInput.value = post.titulo;
   categoriaInput.value = post.categoria;
@@ -263,14 +281,14 @@ function editarPost(post) {
   conteudoInput.value = post.conteudo;
 
   editId = post.id; // Armazena o ID do post sendo editado
-  modalTitle.textContent = "Editar postagem"; // Altera título do modal
+  modalTitle.textContent = "Editar postagem"; // Altera título do modal para "Editar"
   modalOverlay.classList.add("active"); // Abre o modal
 }
 
 // Abre o modal de confirmação de exclusão
 function abrirModalExclusao(post) {
   postToDelete = post; // Armazena referência do post a ser excluído
-  postTitlePreview.textContent = post.titulo; // Mostra título no preview
+  postTitlePreview.textContent = post.titulo; // Mostra título no preview do modal
   deleteModalOverlay.classList.add("active"); // Abre o modal
 }
 
@@ -280,185 +298,85 @@ async function confirmarExclusao() {
 
   try {
     // Requisição DELETE para a API
+    // Envia DELETE para /posts/{id}
     await fetch(`${API_URL}/${postToDelete.id}`, {
-      method: "DELETE",
+      method: "DELETE", // Método HTTP DELETE
     });
 
     fecharModalExcluir(); // Fecha o modal
-    listarTodosPosts(); // Recarrega a lista de posts
+    listarTodosPosts(); // Recarrega a lista de posts (atualiza interface)
   } catch (error) {
     console.error("Erro ao excluir post:", error);
     alert("Erro ao excluir postagem."); // Feedback para o usuário
   }
 }
 
-// Salva um post novo ou atualiza um existente
-async function salvarPost(e) {
-  e.preventDefault(); // Impede o comportamento padrão do formulário
-
-  // Coleta os dados do formulário
-  const postData = {
-    autor: autorInput.value.trim(),
-    titulo: tituloInput.value.trim(),
-    categoria: categoriaInput.value.trim(),
-    imagem: imagemInput.value.trim(),
-    conteudo: conteudoInput.value.trim(),
-    data: new Date().toISOString(), // Data atual como padrão
-  };
-
-  try {
-    if (editId) {
-      // MODE EDIÇÃO: Atualiza post existente
-      const postExistente = allPosts.find((p) => p.id === editId);
-      postData.data = postExistente.data; // Mantém a data original
-
-      // Requisição PUT para atualizar
-      await fetch(`${API_URL}/${editId}`, {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(postData),
-      });
-    } else {
-      // MODO CRIAÇÃO: Cria novo post
-      await fetch(API_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(postData),
-      });
-    }
-
-    fecharModalCriar(); // Fecha o modal
-    listarTodosPosts(); // Recarrega a lista de posts
-  } catch (error) {
-    console.error("Erro ao salvar post:", error);
-    alert("Erro ao salvar postagem."); // Feedback para o usuário
-  }
-}
-
-// ===== FUNÇÃO AUXILIAR - POSTS EXEMPLO =====
-
-// Adiciona posts de exemplo para demonstração (apenas se não houver posts)
-async function adicionarPostsExemplo() {
-  const postsExemplo = [
-    {
-      id: 1,
-      titulo: "Como o React.JS mudou a forma de construir sistemas modernos?",
-      conteudo: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-      autor: "Helena Souza",
-      categoria: "Tecnologia",
-      imagem: "https://images.unsplash.com/photo-1633356122544-f134324a6cee...",
-      data: new Date(2024, 1, 16).toISOString(), // 16 de fevereiro
-    },
-    {
-      id: 2,
-      titulo: "Os desafios do desenvolvimento frontend em 2024",
-      conteudo: "Ut enim ad minim veniam, quis nostrud exercitation...",
-      autor: "Carlos Silva",
-      categoria: "Frontend",
-      imagem: "https://images.unsplash.com/photo-1555066931-4365d14bab8c...",
-      data: new Date(2024, 1, 15).toISOString(), // 15 de fevereiro
-    },
-    {
-      id: 3,
-      titulo: "A importância da acessibilidade web nos projetos atuais",
-      conteudo: "Duis aute irure dolor in reprehenderit in voluptate...",
-      autor: "João Silva",
-      categoria: "Acessibilidade",
-      imagem: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d...",
-      data: new Date(2024, 1, 14).toISOString(), // 14 de fevereiro
-    },
-  ];
-
-  try {
-    // Verifica se já existem posts no servidor
-    const response = await fetch(API_URL);
-    const postsExistentes = await response.json();
-
-    // Só adiciona exemplos se não houver posts
-    if (postsExistentes.length === 0) {
-      // Adiciona cada post exemplo
-      for (const post of postsExemplo) {
-        await fetch(API_URL, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(post),
-        });
-      }
-      console.log("Posts exemplo adicionados com sucesso!");
-      listarTodosPosts(); // Recarrega a lista com os novos posts
-    }
-  } catch (error) {
-    console.error("Erro ao adicionar posts exemplo:", error);
-  }
-}
-
-
 // ===== FUNÇÃO PARA SINCRONIZAR COM O BLOG =====
 
-// Formata os dados do post no padrão do blog
-function formatarDadosParaBlog(postData) {
+// Formata os dados do post no padrão do blog (com data de edição real)
+function formatarDadosParaBlog(postData, estaEditando = false) {
     const agora = new Date();
     
-    // Formatar data no padrão do blog "16, Fev"
-    const dia = agora.getDate();
-    const mes = agora.toLocaleDateString('pt-BR', { month: 'short' }).replace('.', '');
-    const dataBlog = `${dia}, ${mes}`;
-    
-    // Horário relativo (pode ser dinâmico ou fixo)
-    const minutosAtras = Math.floor(Math.random() * 30) + 1; // 1-30 minutos
-    const horarioBlog = `Editado há ${minutosAtras} minutos`;
-    
-    return {
+    // Para novos posts, data de criação = data de edição
+    // Para edições, mantém data original de criação, mas adiciona data de edição
+    const dadosFormatados = {
         ...postData,
-        // Campos específicos do blog
-        dataBlog: dataBlog,
-        horarioBlog: horarioBlog,
-        // Garantir que a categoria esteja em maiúsculo como no blog
         categoria: postData.categoria.toUpperCase()
     };
+    
+    // Adiciona timestamp da última edição
+    dadosFormatados.ultimaEdicao = agora.toISOString();
+    
+    // Se é um NOVO POST, também define a data de criação
+    if (!estaEditando) {
+        dadosFormatados.data = agora.toISOString();
+    }
+    
+    return dadosFormatados;
 }
 
-// ===== MODIFICAÇÃO NA FUNÇÃO salvarPost =====
-
+// Salva um post novo ou atualiza um existente
 async function salvarPost(e) {
-    e.preventDefault();
+    e.preventDefault(); // Impede o comportamento padrão do formulário (recarregar página)
 
-    // Coleta os dados do formulário
+    // Coleta os dados do formulário em um objeto
     const postData = {
-        autor: autorInput.value.trim(),
+        autor: autorInput.value.trim(), // Remove espaços extras
         titulo: tituloInput.value.trim(),
         categoria: categoriaInput.value.trim(),
         imagem: imagemInput.value.trim(),
         conteudo: conteudoInput.value.trim(),
-        data: new Date().toISOString(),
+        // data será definida na função formatarDadosParaBlog
     };
 
     try {
+        // Determina se está editando ou criando novo
+        const estaEditando = editId !== null;
+        
         // Formata os dados para o padrão do blog
-        const dadosFormatados = formatarDadosParaBlog(postData);
+        const dadosFormatados = formatarDadosParaBlog(postData, estaEditando);
 
         if (editId) {
             // MODO EDIÇÃO: Atualiza post existente
             const postExistente = allPosts.find((p) => p.id === editId);
-            dadosFormatados.data = postExistente.data; // Mantém a data original
-
+            
+            // Mantém a data ORIGINAL de criação
+            dadosFormatados.data = postExistente.data;
+            
+            // Preserva outras propriedades existentes
+            dadosFormatados.id = postExistente.id;
+            
             await fetch(`${API_URL}/${editId}`, {
-                method: "PUT",
+                method: "PUT", // Método HTTP PUT (atualizar)
                 headers: {
-                    "Content-Type": "application/json",
+                    "Content-Type": "application/json", // Informa que estamos enviando JSON
                 },
-                body: JSON.stringify(dadosFormatados),
+                body: JSON.stringify(dadosFormatados), // Converte objeto para string JSON
             });
         } else {
             // MODO CRIAÇÃO: Cria novo post
             await fetch(API_URL, {
-                method: "POST",
+                method: "POST", // Método HTTP POST (criar)
                 headers: {
                     "Content-Type": "application/json",
                 },
@@ -466,24 +384,26 @@ async function salvarPost(e) {
             });
         }
 
-        fecharModalCriar();
-        listarTodosPosts();
+        fecharModalCriar(); // Fecha o modal
+        listarTodosPosts(); // Recarrega a lista de posts
         
-        // Feedback visual
-        mostrarNotificacao('Post salvo e sincronizado com o blog!');
+        // Feedback visual de sucesso
+        mostrarNotificacao(estaEditando ? 'Post atualizado com sucesso!' : 'Post criado com sucesso!');
         
     } catch (error) {
         console.error("Erro ao salvar post:", error);
-        alert("Erro ao salvar postagem.");
+        alert("Erro ao salvar postagem."); // Feedback para o usuário
     }
 }
 
-// Função para mostrar notificação
+// Função para mostrar notificação temporária
 function mostrarNotificacao(mensagem) {
     // Cria uma notificação temporária
     const notification = document.createElement('div');
     notification.className = 'notification-sync';
     notification.textContent = mensagem;
+    
+    // Estilos inline para a notificação
     notification.style.cssText = `
         position: fixed;
         top: 20px;
@@ -496,8 +416,9 @@ function mostrarNotificacao(mensagem) {
         animation: slideIn 0.3s ease;
     `;
     
-    document.body.appendChild(notification);
+    document.body.appendChild(notification); // Adiciona à página
     
+    // Remove após 3 segundos
     setTimeout(() => {
         notification.remove();
     }, 3000);
